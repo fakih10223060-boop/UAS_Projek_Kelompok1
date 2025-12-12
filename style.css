@@ -49,3 +49,13 @@ body {
     background: none;
     cursor: pointer;
 }
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.cta-button {
+    margin-left: auto;
+}
