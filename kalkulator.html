@@ -15,5 +15,49 @@
       }
     </style>
   </head>
-  <body class="bg-gray-50 text-gray-700"></body>
+  <body class="bg-gray-50 text-gray-700">
+    <main class="container mx-auto px-4 py-12 max-w-4xl">
+        <div class="text-center mb-10">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Kalkulator Zakat</h1>
+            <p class="text-gray-500">Hitung kewajiban zakat Anda dengan mudah dan akurat sesuai syariat Islam.</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-3 mb-10">
+            <button class="px-6 py-2 rounded-full bg-blue-700 text-white font-medium">Zakat Profesi</button>
+            <button class="px-6 py-2 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100 transition">Zakat Maal</button>
+            <button class="px-6 py-2 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100 transition">Zakat Fitrah</button>
+            <button class="px-6 py-2 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100 transition">Zakat Pertanian</button>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+            <h2 class="text-xl font-bold mb-6 text-gray-800">Hitung Zakat Profesi Anda</h2>
+            
+            <div class="space-y-6">
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Penghasilan Bruto per Bulan</label>
+                    <div class="relative">
+                        <span class="absolute left-4 top-3 text-gray-400">Rp</span>
+                        <input type="number" class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none" placeholder="12000000">
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1 italic">Termasuk gaji, tunjangan, dan bonus.</p>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Pengeluaran Rutin per Bulan</label>
+                    <div class="relative">
+                        <span class="absolute left-4 top-3 text-gray-400">Rp</span>
+                        <input type="number" class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none" placeholder="4500000">
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1 italic">Kebutuhan pokok seperti makan, transportasi, pendidikan, dll.</p>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold mb-2">Cicilan Utang/Kewajiban Lain per Bulan</label>
+                    <div class="relative">
+                        <span class="absolute left-4 top-3 text-gray-400">Rp</span>
+                        <input type="number" class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none" placeholder="1000000">
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1 italic">Cicilan atau kewajiban finansial lainnya.</p>
+                </div>
+            </div>
+  </body>
+
 </html>
