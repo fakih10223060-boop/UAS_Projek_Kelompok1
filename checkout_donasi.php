@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Donasi - Aksi Nyata Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-700">
+    <div
+      class="container mx-auto px-4 py-4 flex justify-between items-center max-w-6xl"
+    >
+      <div class="flex items-center">
+        <div class="text-blue-600 font-bold text-xl flex items-center">
+          <i class="fas fa-hand-holding-heart mr-2 text-orange-500"></i>
+          AKSI NYATA
+          <span class="text-xs block font-normal text-gray-400 ml-1"></span>
+        </div>
+      </div>
+      <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-500">
+        <a href="#" class="hover:text-blue-600">Beranda</a>
+        <a href="#" class="hover:text-blue-600">Program Unggulan</a>
+        <a href="#" class="hover:text-blue-600">Berita Terbaru</a>
+        <a href="#" class="hover:text-blue-600">Kalkulator Zakat</a>
+        <a href="#" class="hover:text-blue-600">Tentang Kami</a>
+      </nav>
+      <button
+        class="bg-green-500 text-white px-4 py-2 rounded-md text-xs font-bold hover:bg-green-600"
+      >
+        DONASI SEKARANG
+      </button>
+    </div>
+    <main class="container mx-auto px-4 py-10 max-w-4xl">
+      <h1 class="text-2xl font-bold text-center mb-10 text-gray-800">
+        LANJUTKAN DONASI ANDAS
+      </h1>
+
+      <form action="proses_checkout.php" method="POST" class="space-y-10">
+        <section
+          class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm"
+        >
+          <h2 class="text-lg font-bold mb-2 text-gray-800">Data Donatur</h2>
+          <p class="text-xs text-gray-400 mb-6 font-medium">
+            Informasi ini akan digunakan untuk konfirmasi donasi Anda.
+          </p>
+
+          <div class="space-y-4">
+            <div>
+              <label
+                class="block text-[10px] font-bold text-gray-500 mb-1 uppercase"
+                >Nama Lengkap</label
+              >
+              <input
+                type="text"
+                name="nama"
+                class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:ring-1 focus:ring-blue-500 outline-none"
+                placeholder="Nama Lengkap Anda"
+              />
+            </div>
+            <div>
+              <label
+                class="block text-[10px] font-bold text-gray-500 mb-1 uppercase"
+                >Email</label
+              >
+              <input
+                type="email"
+                name="email"
+                class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:ring-1 focus:ring-blue-500 outline-none"
+                placeholder="cepihsaniskan@gmail.com"
+              />
+            </div>
+            <div>
+              <label
+                class="block text-[10px] font-bold text-gray-500 mb-1 uppercase"
+                >Nomor Telepon</label
+              >
+              <input
+                type="tel"
+                name="phone"
+                class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:ring-1 focus:ring-blue-500 outline-none"
+                placeholder="083839421020"
+              />
+            </div>
+            <div class="flex items-center space-x-2 pt-2">
+              <input
+                type="checkbox"
+                id="anonim"
+                class="rounded text-blue-600"
+              />
+              <label
+                for="anonim"
+                class="text-[10px] text-gray-500 font-medium italic"
+                >Donasi sebagai Anonim (Nama Anda tidak akan ditampilkan di
+                publik)</label
+              >
+            </div>
+          </div>
+        </section>
+        <section
+          class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm"
+        >
+          <h2 class="text-lg font-bold mb-2 text-gray-800">Nominal Donasi</h2>
+          <p class="text-xs text-gray-400 mb-6 font-medium">
+            Pilih atau masukkan jumlah donasi yang ingin Anda berikan.
+          </p>
+
+          <div class="relative mb-4">
+            <span class="absolute left-4 top-3 text-sm text-gray-400">Rp</span>
+            <input
+              type="number"
+              class="w-full border border-gray-200 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:ring-1 focus:ring-blue-500 outline-none font-bold"
+              placeholder="0"
+            />
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-2">
+            <?php 
+                    $nominals = ['50.000', '100.000', '250.000', '500.000', '1.000.000'];
+                    foreach($nominals as $val): ?>
+            <button
+              type="button"
+              class="border border-blue-100 text-blue-600 py-2 rounded-lg text-[10px] font-bold hover:bg-blue-50 transition"
+            >
+              Rp
+              <?php echo $val; ?>
+            </button>
+            <?php endforeach; ?>
+          </div>
+        </section>
+        <section
+          class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm"
+        >
+          <h2 class="text-lg font-bold mb-2 text-gray-800">
+            Pilih Metode Pembayaran
+          </h2>
+          <p class="text-xs text-gray-400 mb-6 font-medium">
+            Sediakan pilihan pembayaran lengkap berupa Transfer Otomatis,
+            E-Wallet/QRIS, dan Gerai Ritel.
+          </p>
+
+          <div class="flex border-b border-gray-100 mb-6 space-x-6">
+            <button
+              type="button"
+              class="text-blue-600 border-b-2 border-blue-600 pb-2 text-[11px] font-bold"
+            >
+              Transfer Bank Otomatis
+            </button>
+            <button
+              type="button"
+              class="text-gray-400 pb-2 text-[11px] font-bold"
+            >
+              E-Wallet & QRIS
+            </button>
+            <button
+              type="button"
+              class="text-gray-400 pb-2 text-[11px] font-bold"
+            >
+              Gerai Ritel
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div
+              class="border border-gray-100 rounded-lg p-4 flex items-center space-x-4 cursor-pointer hover:border-blue-500 transition group"
+            >
+              <div class="w-12 h-8 bg-gray-200 rounded"></div>
+              <div>
+                <p class="text-xs font-bold text-gray-800">
+                  BCA Virtual Account
+                </p>
+                <p class="text-[9px] text-gray-400">
+                  Nomor Virtual Account akan muncul setelah konfirmasi.
+                </p>
+              </div>
+            </div>
+            <div
+              class="border border-gray-100 rounded-lg p-4 flex items-center space-x-4 cursor-pointer hover:border-blue-500 transition"
+            >
+              <div class="w-12 h-8 bg-gray-200 rounded"></div>
+              <div>
+                <p class="text-xs font-bold text-gray-800">
+                  Mandiri Virtual Account
+                </p>
+                <p class="text-[9px] text-gray-400">
+                  Nomor Virtual Account akan muncul setelah konfirmasi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm"
+        >
+          <h2 class="text-lg font-bold mb-2 text-gray-800">
+            Konfirmasi Donasi
+          </h2>
+          <p class="text-xs text-gray-400 mb-8 font-medium">
+            Pastikan semua detail donasi Anda sudah benar sebelum menyelesaikan
+            pembayaran.
+          </p>
+
+          <div class="space-y-3 mb-8">
+            <div class="flex justify-between text-[11px]">
+              <span class="text-gray-400 font-medium">Nama Donatur:</span>
+              <span class="text-gray-800 font-bold">-</span>
+            </div>
+            <div class="flex justify-between text-[11px]">
+              <span class="text-gray-400 font-medium">Email:</span>
+              <span class="text-gray-800 font-bold">-</span>
+            </div>
+            <div class="flex justify-between text-[11px]">
+              <span class="text-gray-400 font-medium">Telepon:</span>
+              <span class="text-gray-800 font-bold">-</span>
+            </div>
+            <div
+              class="flex justify-between items-center pt-2 border-t border-gray-50"
+            >
+              <span class="text-[11px] text-gray-400 font-medium"
+                >Jumlah Donasi:</span
+              >
+              <span class="text-lg font-extrabold text-blue-600">Rp 0</span>
+            </div>
+            <div class="flex justify-between text-[11px]">
+              <span class="text-gray-400 font-medium">Metode Pembayaran:</span>
+              <span class="text-gray-800 font-bold">-</span>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-green-200 text-green-700 py-3 rounded-lg font-bold text-sm hover:bg-green-300 transition"
+          >
+            Selesaikan Donasi
+          </button>
+        </section>
+      </form>
+    </main>
+    <footer class="bg-blue-50/50 pt-16 pb-8 border-t border-blue-50 mt-20">
+      <div
+        class="container mx-auto px-4 max-w-6xl grid grid-cols-1 md:grid-cols-4 gap-12 text-[11px]"
+      >
+        <div>
+          <p class="text-gray-500 leading-relaxed mb-8">
+            LAZNAS & Panti Yatim berkomitmen untuk menyalurkan amanah donasi
+            Anda dengan transparan dan efektif.
+          </p>
+          <h4 class="font-bold mb-4 uppercase text-gray-800 tracking-wider">
+            Legalitas
+          </h4>
+          <ul class="space-y-2 text-blue-600 font-medium">
+            <li><a href="#">Kebijakan Privasi</a></li>
+            <li><a href="#">Syarat & Ketentuan</a></li>
+            <li><a href="#">Transparansi</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-6 uppercase text-gray-800 tracking-wider">
+            Kontak
+          </h4>
+          <ul class="space-y-3 text-gray-500">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-0.5 mr-3 text-blue-500"></i>Jl.
+              Ophir No. 6, Jakarta
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-3 text-blue-500"></i
+              >aksinyatafoundation pakubuwono@gmail.com
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone mr-3 text-blue-500"></i>081385239366
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-6 uppercase text-gray-800 tracking-wider">
+            Tautan Cepat
+          </h4>
+          <ul class="space-y-3 text-gray-500 font-medium">
+            <li><a href="#" class="hover:text-blue-600">Program Kami</a></li>
+            <li><a href="#" class="hover:text-blue-600">Berita & Acara</a></li>
+            <li>
+              <a href="#" class="hover:text-blue-600">kalkulator zakat</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-6 uppercase text-gray-800 tracking-wider">
+            Sosial Media
+          </h4>
+          <ul class="space-y-3 text-gray-500 font-medium">
+            <li>
+              <a href="#" class="flex items-center hover:text-blue-600"
+                ><i class="fab fa-facebook w-5 text-blue-800 text-sm"></i>
+                Facebook</a
+              >
+            </li>
+            <li>
+              <a href="#" class="flex items-center hover:text-blue-600"
+                ><i class="fab fa-instagram w-5 text-pink-600 text-sm"></i>
+                Instagram</a
+              >
+            </li>
+            <li>
+              <a href="#" class="flex items-center hover:text-blue-600"
+                ><i class="fab fa-twitter w-5 text-blue-400 text-sm"></i>
+                Twitter</a
+              >
+            </li>
+            <li>
+              <a href="#" class="flex items-center hover:text-blue-600"
+                ><i class="fab fa-youtube w-5 text-red-600 text-sm"></i>
+                Youtube</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="text-center mt-16 text-[9px] text-gray-400 border-t border-gray-100 pt-8"
+      >
+        Aksinyata Foundation Pakubuwono
+      </div>
+    </footer>
+  </body>
+</html>
