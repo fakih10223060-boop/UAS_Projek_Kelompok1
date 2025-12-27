@@ -24,9 +24,7 @@
         <div class="text-blue-600 font-bold text-xl flex items-center">
           <i class="fas fa-hand-holding-heart mr-2 text-orange-500"></i>
           AKSI NYATA
-          <span class="text-xs block font-normal text-gray-400 ml-1"
-            >Foundation</span
-          >
+          <span class="text-xs block font-normal text-gray-400 ml-1"></span>
         </div>
       </div>
       <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-500">
