@@ -1,8 +1,3 @@
-<?php
-include 'config/koneksi.php';
-$data = mysqli_query($conn, "SELECT * FROM berita ORDER BY created_at DESC");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,11 +21,11 @@ $data = mysqli_query($conn, "SELECT * FROM berita ORDER BY created_at DESC");
 
                 <!-- Menu -->
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
-                    <a href="index.html" class="text-blue-600">Beranda</a>
-                    <a href="program.html" class="text-gray-600 hover:text-blue-600">Program Unggulan</a>
-                    <a href="berita.html" class="text-gray-600 hover:text-blue-600">Berita Terbaru</a>
-                    <a href="kalkulator.html" class="text-gray-600 hover:text-blue-600">Kalkulator Zakat</a>
-                    <a href="tentang.html" class="text-gray-600 hover:text-blue-600">Tentang Kami</a>
+                    <a href="index.php" class="text-blue-600">Beranda</a>
+                    <a href="program.php" class="text-gray-600 hover:text-blue-600">Program Unggulan</a>
+                    <a href="berita.php" class="text-gray-600 hover:text-blue-600">Berita Terbaru</a>
+                    <a href="kalkulator.php" class="text-gray-600 hover:text-blue-600">Kalkulator Zakat</a>
+                    <a href="tentang.php" class="text-gray-600 hover:text-blue-600">Tentang Kami</a>
                 </div>
 
                 <!-- Button -->
