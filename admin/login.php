@@ -10,7 +10,7 @@
 </head>
 
 <body class="min-h-screen flex items-center justify-center bg-cover bg-center"
-    style="background-image: url('../assets/img/mekah.jpg');">
+    style="background-image: url('../admin/asset/logo1.jpeg');">
 
     <!-- Overlay gelap -->
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
