@@ -11,45 +11,34 @@ include 'config/panti_admin.php';
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<<<<<<< HEAD <body class="bg-gray-100">
-
-    =======
-
     <body class="bg-grey-100">
-        >>>>>>> 63c3877074a519eb69ed95c735c6502c9f13d074
+
         <!-- Navbar -->
-        <nav class="bg-white shadow">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="flex items-center justify-between h-16">
-                    <!-- Logo -->
-                    <div class="flex items-center space-x-2">
-                        <img src="asset/logo/logo1.jpeg" alt="Aksi Nyata Foundation" class="h-8" />
-                        <span class="font-bold text-gray-800">AKSI NYATA</span>
-                    </div>
+       <nav class="bg-white shadow sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2">
+                    <img src="asset/logo/logo1.jpeg" alt="Logo Aksi Nyata" class="h-8">
+                    <span class="font-bold text-gray-800 uppercase">Aksi Nyata</span>
+                </div>
 
-                    <!-- Menu -->
-                    <div class="hidden md:flex space-x-8 text-sm font-medium">
-                        <a href="index.php" class="text-blue-600">Beranda</a>
-                        <a href="program.php" class="text-gray-600 hover:text-blue-600">Program Unggulan</a>
-                        <<<<<<< HEAD=======<a href="berita.php" class="text-gray-600 hover:text-blue-600">Berita
-                            Terbaru</a>
-                            >>>>>>> 63c3877074a519eb69ed95c735c6502c9f13d074
-                            <a href="kalkulator.php" class="text-gray-600 hover:text-blue-600">Kalkulator Zakat</a>
-                            <a href="tentang.php" class="text-gray-600 hover:text-blue-600">Tentang Kami</a>
-                    </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.php" class="text-blue-600">Beranda</a>
+                    <a href="program.php" class="text-gray-600 hover:text-blue-600">Program Unggulan</a>
+                    <a href="berita.php" class="text-gray-600 hover:text-blue-600">Berita Terbaru</a>
+                    <a href="kalkulator.php" class="text-gray-600 hover:text-blue-600">Kalkulator Zakat</a>
+                    <a href="tentang.php" class="text-gray-600 hover:text-blue-600">Tentang Kami</a>
+                </div>
 
-                    <!-- Button -->
-                    <div>
-                        <a href="donasi.php"
-                            class="bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-5 py-2 rounded-md transition">
-                            DONASI SEKARANG
-                        </a>
-                    </div>
+                <div class="flex items-center gap-4">
+                    <a href="donasi.php"
+                        class="bg-green-500 hover:bg-green-600 text-white text-xs md:text-sm font-semibold px-5 py-2.5 rounded-md transition">
+                        DONASI SEKARANG
+                    </a>
                 </div>
             </div>
-        </nav>
-
-        <<<<<<< HEAD <!-- Banner -->
+        </div>
+<!-- Banner -->
             <section class="relative">
                 <img src="asset/galeri/bander.jpeg" alt="Donasi Pendidikan" class="w-full h-[420px] object-cover" />
             </section>
