@@ -13,7 +13,7 @@
         font-family: 'Inter', sans-serif;
     }
 
-    /* Hapus panah pada input number */
+    /* Hapus panah pada input number *
     input[type=number]::-webkit-inner-spin-button,
     input[type=number]::-webkit-outer-spin-button {
         -webkit-appearance: none;
@@ -24,28 +24,28 @@
 
 <body class="bg-gray-50 flex flex-col min-h-screen">
 
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+    <nav class="bg-white shadow sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-16">
                 <div class="flex items-center gap-2">
-                    <div class="bg-blue-500 text-white p-1.5 rounded-lg">
-                        <i class="ph ph-heart text-2xl"></i>
-                    </div>
-                    <span class="text-xl font-bold text-blue-600">Berkah Amal</span>
+                    <img src="asset/logo/logo1.jpeg" alt="Logo Aksi Nyata" class="h-8">
+                    <span class="font-bold text-gray-800 uppercase">Aksi Nyata</span>
                 </div>
 
-                <div class="hidden md:flex space-x-8">
-                    <a href="#" class="text-gray-500 hover:text-blue-600 font-medium text-sm">Home</a>
-                    <a href="#" class="text-gray-500 hover:text-blue-600 font-medium text-sm">Program</a>
-                    <a href="#" class="text-gray-500 hover:text-blue-600 font-medium text-sm">Tentang Kami</a>
-                    <a href="#" class="text-gray-500 hover:text-blue-600 font-medium text-sm">Berita</a>
-                    <a href="#" class="text-blue-600 font-bold text-sm">Kalkulator Zakat</a>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.php" class="text-blue-600">Beranda</a>
+                    <a href="program.php" class="text-gray-600 hover:text-blue-600">Program Unggulan</a>
+                    <a href="berita.php" class="text-gray-600 hover:text-blue-600">Berita Terbaru</a>
+                    <a href="kalkulator.php" class="text-gray-600 hover:text-blue-600">Kalkulator Zakat</a>
+                    <a href="tentang.php" class="text-gray-600 hover:text-blue-600">Tentang Kami</a>
                 </div>
 
-                <a href="#"
-                    class="bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-bold py-2.5 px-6 rounded-full transition shadow-md">
-                    DONASI SEKARANG
-                </a>
+                <div class="flex items-center gap-4">
+                    <a href="donasi.php"
+                        class="bg-green-500 hover:bg-green-600 text-white text-xs md:text-sm font-semibold px-5 py-2.5 rounded-md transition">
+                        DONASI SEKARANG
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -146,6 +146,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
 
                 <div id="content-profesi" class="hidden">
@@ -222,67 +223,67 @@
         </div>
     </main>
 
-    <footer class="bg-blue-500 pt-16 pb-8 text-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <div class="col-span-1 md:col-span-1">
-                    <div class="flex items-center gap-2 mb-4">
-                        <div class="bg-white text-blue-500 p-1 rounded">
-                            <i class="ph ph-heart text-xl"></i>
-                        </div>
-                        <span class="text-xl font-bold">Berkah Amal</span>
-                    </div>
-                    <p class="text-blue-100 text-sm leading-relaxed">
-                        Mendedikasikan diri untuk membantu sesama melalui pendidikan, kemanusiaan, dan zakat.
+    <footer class="bg-blue-50 text-gray-700">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <p class="text-sm leading-relaxed">
+                        LAZNAS & Panti Yatim berkomitmen untuk menyalurkan amanah donasi Anda dengan transparan dan
+                        efektif.
                     </p>
                 </div>
 
                 <div>
-                    <h4 class="font-bold text-lg mb-4">Kontak</h4>
-                    <ul class="space-y-3 text-blue-100 text-sm">
-                        <li class="flex items-center gap-2"><i class="ph ph-phone"></i> +62 812 3456 7890</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-envelope"></i> info@berkahamal.org</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-map-pin"></i> Jl. Contoh No. 123, Jakarta
+                    <h3 class="font-semibold mb-4">Kontak</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>Jl. Ophir II No. 6A RT 007/RW 001, Kelurahan Gunung, Kecamatan Kebayoran Baru, Jakarta
+                            Selatan</li>
+                        <li>
+                            <a href="mailto:info@aksinyata.org" class="hover:text-blue-600">
+                                info@aksinyata.org
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:087711999023" class="hover:text-blue-600">
+                                0877-1199-9023
+                            </a>
                         </li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-bold text-lg mb-4">Tautan Cepat</h4>
-                    <ul class="space-y-2 text-blue-100 text-sm">
-                        <li><a href="#" class="hover:text-white hover:underline">Program Unggulan</a></li>
-                        <li><a href="#" class="hover:text-white hover:underline">Berita Terbaru</a></li>
-                        <li><a href="#" class="hover:text-white hover:underline">Kalkulator Zakat</a></li>
-                        <li><a href="#" class="hover:text-white hover:underline">Donasi Sekarang</a></li>
+                    <h3 class="font-semibold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-blue-600">Program Kami</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Berita & Acara</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Kalkulator Zakat</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-blue-600">FAQ</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-bold text-lg mb-4">Sosial Media</h4>
-                    <ul class="space-y-2 text-blue-100 text-sm">
-                        <li><a href="#" class="flex items-center gap-2 hover:text-white"><i
-                                    class="ph ph-facebook-logo"></i> Facebook</a></li>
-                        <li><a href="#" class="flex items-center gap-2 hover:text-white"><i
-                                    class="ph ph-twitter-logo"></i> Twitter</a></li>
-                        <li><a href="#" class="flex items-center gap-2 hover:text-white"><i
-                                    class="ph ph-instagram-logo"></i> Instagram</a></li>
-                        <li><a href="#" class="flex items-center gap-2 hover:text-white"><i
-                                    class="ph ph-youtube-logo"></i> YouTube</a></li>
+                    <h3 class="font-semibold mb-4">Sosial Media</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-blue-600">Facebook</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Instagram</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Twitter</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Youtube</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div
-                class="border-t border-blue-400 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center text-xs text-blue-200">
-                <div class="mb-4 md:mb-0">
-                    <p class="font-bold mb-2">Legalitas</p>
-                    <div class="flex gap-4">
-                        <span>SK Kemenkumham</span>
-                        <span>Laporan Tahunan</span>
-                        <span>Kebijakan Privasi</span>
-                    </div>
-                </div>
-                <p>&copy; 2025 Berkah Amal. All rights reserved.</p>
+            <div class="mt-10">
+                <h3 class="font-semibold mb-3">Legalitas</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-blue-600">Kebijakan Privasi</a></li>
+                    <li><a href="#" class="hover:text-blue-600">Syarat & Ketentuan</a></li>
+                    <li><a href="#" class="hover:text-blue-600">Transparansi</a></li>
+                </ul>
+            </div>
+
+            <div class="border-t border-gray-300 mt-8 pt-6 text-center text-sm text-gray-500">
+                © 2025 LAZNAS & Panti Yatim. All rights reserved.
             </div>
         </div>
     </footer>
