@@ -112,74 +112,81 @@
         </section>
 
 
-        <footer class="bg-blue-50 text-blue-900">
-            <div class="max-w-7xl mx-auto px-6 py-14">
+        <footer class="bg-blue-50 text-gray-700">
+        <div class="max-w-7xl mx-auto px-6 py-12">
 
-                <!-- GRID UTAMA -->
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+            <!-- Grid Utama -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-                    <!-- TENTANG -->
-                    <div>
-                        <p class="text-sm leading-relaxed text-blue-800">
-                            LAZNAS & Panti Yatim berkomitmen untuk menyalurkan amanah donasi Anda
-                            dengan transparan dan efektif.
-                        </p>
-                    </div>
-
-                    <!-- KONTAK -->
-                    <div>
-                        <h3 class="font-semibold mb-4">Kontak</h3>
-                        <ul class="text-sm space-y-2 text-blue-800">
-                            <li>Jl. Raya Condet No. 12, Jakarta Timur</li>
-                            <li>info@laznas.org</li>
-                            <li>+62 812 3456 7890</li>
-                        </ul>
-                    </div>
-
-                    <!-- TAUTAN CEPAT -->
-                    <div>
-                        <h3 class="font-semibold mb-4">Tautan Cepat</h3>
-                        <ul class="text-sm space-y-2 text-blue-800">
-                            <li><a href="#" class="hover:underline">Program Kami</a></li>
-                            <li><a href="#" class="hover:underline">Berita & Acara</a></li>
-                            <li><a href="#" class="hover:underline">Kalkulator Zakat</a></li>
-                            <li><a href="#" class="hover:underline">Tentang Kami</a></li>
-                            <li><a href="#" class="hover:underline">FAQ</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- SOSIAL MEDIA -->
-                    <div>
-                        <h3 class="font-semibold mb-4">Sosial Media</h3>
-                        <ul class="text-sm space-y-2 text-blue-800">
-                            <li><a href="#" class="hover:underline">Facebook</a></li>
-                            <li><a href="#" class="hover:underline">Instagram</a></li>
-                            <li><a href="#" class="hover:underline">Twitter</a></li>
-                            <li><a href="#" class="hover:underline">YouTube</a></li>
-                        </ul>
-                    </div>
-
+                <!-- Deskripsi -->
+                <div>
+                    <p class="text-sm leading-relaxed">
+                        LAZNAS & Panti Yatim berkomitmen untuk menyalurkan amanah donasi Anda
+                        dengan transparan dan efektif.
+                    </p>
                 </div>
 
-                <!-- LEGALITAS -->
-                <div class="mt-12">
-                    <h3 class="font-semibold mb-3">Legalitas</h3>
-                    <ul class="text-sm space-y-2 text-blue-800">
-                        <li><a href="#" class="hover:underline">Kebijakan Privasi</a></li>
-                        <li><a href="#" class="hover:underline">Syarat & Ketentuan</a></li>
-                        <li><a href="#" class="hover:underline">Transparansi</a></li>
+                <!-- Kontak -->
+                <div>
+                    <h3 class="font-semibold mb-4">Kontak</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>Jl. Ophir II No. 6A RT 007/RW 001, Kelurahan
+                            Gunung, Kecamatan Kebayoran Baru, Jakarta Selatan</li>
+                        <li>
+                            <a href="mailto:info@aksinyata.org" class="hover:text-blue-600">
+                                info@aksinyata.org
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+6281234567890" class="hover:text-blue-600">
+                                0877-1199-9023
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
-                <!-- GARIS -->
-                <hr class="my-8 border-blue-200">
+                <!-- Tautan Cepat -->
+                <div>
+                    <h3 class="font-semibold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-blue-600">Program Kami</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Berita & Acara</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Kalkulator Zakat</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-blue-600">FAQ</a></li>
+                    </ul>
+                </div>
 
-                <!-- COPYRIGHT -->
-                <p class="text-center text-xs text-blue-700">
-                    © 2025 LAZNAS & Panti Yatim. All rights reserved.
-                </p>
+                <!-- Sosial Media -->
+                <div>
+                    <h3 class="font-semibold mb-4">Sosial Media</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-blue-600">Facebook</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Instagram</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Twitter</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Youtube</a></li>
+                    </ul>
+                </div>
+
             </div>
-        </footer>
+
+            <!-- Legalitas -->
+            <div class="mt-10">
+                <h3 class="font-semibold mb-3">Legalitas</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-blue-600">Kebijakan Privasi</a></li>
+                    <li><a href="#" class="hover:text-blue-600">Syarat & Ketentuan</a></li>
+                    <li><a href="#" class="hover:text-blue-600">Transparansi</a></li>
+                </ul>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-300 mt-8 pt-6 text-center text-sm text-gray-500">
+                © 2025 LAZNAS & Panti Yatim. All rights reserved.
+            </div>
+
+        </div>
+    </footer>
 </body>
 
 </html>
