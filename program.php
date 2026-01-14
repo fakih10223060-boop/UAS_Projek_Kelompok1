@@ -1,270 +1,326 @@
+<?php
+include 'config/panti_admin.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donasi</title>
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-grey-100">
-    <!-- Navbar -->
-    <nav class="bg-white shadow">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="flex items-center justify-between h-16">
-          <!-- Logo -->
-          <div class="flex items-center space-x-2">
-            <img
-              src="asset/logo/logo1.jpeg"
-              alt="Aksi Nyata Foundation"
-              class="h-8"
-            />
-            <span class="font-bold text-gray-800">AKSI NYATA</span>
-          </div>
+</head>
 
-          <!-- Menu -->
-          <div class="hidden md:flex space-x-8 text-sm font-medium">
-            <a href="index.html" class="text-blue-600">Beranda</a>
-            <a href="program.html" class="text-gray-600 hover:text-blue-600"
-              >Program Unggulan</a
-            >
-            <a href="berita.html" class="text-gray-600 hover:text-blue-600"
-              >Berita Terbaru</a
-            >
-            <a href="kalkulator.html" class="text-gray-600 hover:text-blue-600"
-              >Kalkulator Zakat</a
-            >
-            <a href="tentang.html" class="text-gray-600 hover:text-blue-600"
-              >Tentang Kami</a
-            >
-          </div>
+<<<<<<< HEAD <body class="bg-gray-100">
 
-          <!-- Button -->
-          <div>
-            <a
-              href="#"
-              class="bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-5 py-2 rounded-md transition"
-            >
-              DONASI SEKARANG
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
+    =======
 
-    <section class="relative">
-      <img
-        src="asset/galeri/bander.jpeg"
-        alt="Donasi Pendidikan"
-        class="w-full h-[420px] object-cover"
-      />
-    
-      <section class="max-w-5xl mx-auto px-6 py-12">
+    <body class="bg-grey-100">
+        >>>>>>> 63c3877074a519eb69ed95c735c6502c9f13d074
+        <!-- Navbar -->
+        <nav class="bg-white shadow">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex items-center justify-between h-16">
+                    <!-- Logo -->
+                    <div class="flex items-center space-x-2">
+                        <img src="asset/logo/logo1.jpeg" alt="Aksi Nyata Foundation" class="h-8" />
+                        <span class="font-bold text-gray-800">AKSI NYATA</span>
+                    </div>
 
-  <!-- DETAIL PROGRAM -->
-  <h2 class="text-2xl font-bold mb-6 text-center">
-  Detail Program
-</h2>
+                    <!-- Menu -->
+                    <div class="hidden md:flex space-x-8 text-sm font-medium">
+                        <a href="index.php" class="text-blue-600">Beranda</a>
+                        <a href="program.php" class="text-gray-600 hover:text-blue-600">Program Unggulan</a>
+                        <<<<<<< HEAD=======<a href="berita.php" class="text-gray-600 hover:text-blue-600">Berita
+                            Terbaru</a>
+                            >>>>>>> 63c3877074a519eb69ed95c735c6502c9f13d074
+                            <a href="kalkulator.php" class="text-gray-600 hover:text-blue-600">Kalkulator Zakat</a>
+                            <a href="tentang.php" class="text-gray-600 hover:text-blue-600">Tentang Kami</a>
+                    </div>
 
-  <div class="space-y-8 text-gray-700 leading-relaxed">
-
-    <div>
-      <h3 class="font-semibold text-lg mb-2">
-        Masa Depan Cerah untuk Generasi Penerus
-      </h3>
-      <p>
-        Pendidikan adalah kunci untuk membuka pintu masa depan yang lebih baik.
-        Bagi anak-anak yatim dan dhuafa, akses terhadap pendidikan seringkali
-        terhambat oleh keterbatasan finansial. Program Beasiswa Yatim dan Dhuafa
-        hadir untuk memastikan bahwa setiap anak memiliki kesempatan yang sama
-        untuk meraih impian dan potensi terbaik mereka. Melalui program ini, kami
-        menyediakan bantuan biaya pendidikan, perlengkapan sekolah, serta
-        dukungan mentoring agar mereka dapat belajar dengan tenang dan fokus.
-      </p>
-    </div>
-
-    <div>
-      <h3 class="font-semibold text-lg mb-2">
-        Dampak Donasi Anda
-      </h3>
-      <p>
-        Setiap rupiah donasi Anda akan langsung disalurkan untuk kebutuhan
-        pendidikan mereka. Ini mencakup biaya SPP, buku pelajaran, seragam,
-        transportasi, hingga bimbingan belajar tambahan. Dengan pendidikan yang
-        layak, anak-anak ini tidak hanya akan meningkatkan kualitas hidup mereka
-        sendiri, tetapi juga menjadi agen perubahan positif di masyarakat. Mari
-        bersama-sama kita wujudkan harapan mereka untuk masa depan yang lebih
-        cerah dan mandiri.
-      </p>
-    </div>
-
-    <div>
-      <h3 class="font-semibold text-lg mb-2">
-        Bagaimana Program Ini Berjalan?
-      </h3>
-      <p>
-        Kami bekerja sama dengan sekolah-sekolah dan komunitas lokal untuk
-        mengidentifikasi anak-anak yang paling membutuhkan. Setelah melalui
-        proses seleksi yang ketat, para penerima beasiswa akan didampingi oleh
-        tim pendamping kami. Laporan progres akademik dan kegiatan akan
-        disampaikan kepada para donatur secara berkala sebagai bentuk
-        transparansi dan akuntabilitas. Bergabunglah dengan kami untuk
-        menciptakan gelombang kebaikan melalui pendidikan!
-      </p>
-    </div>
-
-  </div>
-
-  <!-- GALERI -->
-  <h2 class="text-2xl font-bold mt-16 mb-6 text-center">Galeri Kegiatan</h2>
-
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-    <img src="asset/galeri/program1.jpeg" class="rounded-xl object-cover w-full h-48" alt="">
-    <img src="asset/galeri/program2.jpeg" class="rounded-xl object-cover w-full h-48" alt="">
-    <img src="asset/galeri/program3.jpeg" class="rounded-xl object-cover w-full h-48" alt="">
-    <img src="asset/galeri/program4.jpeg" class="rounded-xl object-cover w-full h-48" alt="">
-    <img src="asset/galeri/program5.jpeg" class="rounded-xl object-cover w-full h-48" alt="">
-    <img src="asset/galeri/program6.jpeg" class="rounded-xl object-cover w-full h-48" alt="">
-  </div>
-</section>
-
-<section class="bg-gray-50 p-6 flex justify-center">
-<div class="max-w-2xl w-full bg-white rounded-xl shadow-sm border border-gray-100 p-8">
-        <h1 class="text-2xl font-bold text-gray-800">Berdonasi untuk Program Ini</h1>
-        <p class="text-gray-500 mt-1 mb-8">Dukungan Anda sangat berarti bagi keberlanjutan program kami.</p>
-
-        <div class="mb-8">
-            <h2 class="text-lg font-bold text-gray-800 mb-4">Data Donatur</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
-                    <input type="text" placeholder="Masukkan nama Anda" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                    <input type="email" placeholder="contoh@email.com" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none">
+                    <!-- Button -->
+                    <div>
+                        <a href="donasi.php"
+                            class="bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-5 py-2 rounded-md transition">
+                            DONASI SEKARANG
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="mb-4">
-                <label class="block text-sm font-medium text-gray-700 mb-1">Nomor Telepon</label>
-                <input type="text" placeholder="+62 8XX XXXX XXXX" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none">
-            </div>
-            <div class="flex items-center gap-2">
-                <input type="checkbox" id="anonim" class="w-4 h-4 text-blue-600 rounded">
-                <label for="anonim" class="text-sm text-gray-600">Donasi sebagai anonim</label>
-            </div>
-        </div>
+        </nav>
 
-        <div class="mb-8">
-            <h2 class="text-lg font-bold text-gray-800 mb-4">Nominal Donasi</h2>
-            
-            <div class="flex items-center gap-2 mb-4">
-                <button class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100">-</button>
-                <input type="text" value="100000" class="flex-1 text-center border border-gray-300 rounded-lg py-2 font-bold focus:ring-2 focus:ring-blue-500 outline-none">
-                <button class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100">+</button>
-            </div>
+        <<<<<<< HEAD <!-- Banner -->
+            <section class="relative">
+                <img src="asset/galeri/bander.jpeg" alt="Donasi Pendidikan" class="w-full h-[420px] object-cover" />
+            </section>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-                <button class="py-2 px-4 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50">Rp 50.000</button>
-                <button class="py-2 px-4 bg-blue-600 text-white rounded-lg font-medium">Rp 100.000</button>
-                <button class="py-2 px-4 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50">Rp 250.000</button>
-                <button class="py-2 px-4 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50">Rp 500.000</button>
-            </div>
+            <!-- Konten -->
+            <section class="max-w-5xl mx-auto px-6 py-12">
 
-            <textarea placeholder="Pesan (opsional): Semoga donasi ini bermanfaat..." class="w-full border border-gray-300 rounded-lg px-4 py-2 h-24 focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
-        </div>
+                <!-- DETAIL PROGRAM -->
+                <h2 class="text-2xl font-bold mb-6 text-center">Detail Program</h2>
 
-        
-        <div class="mb-8 ">
-            <h2 class="text-lg font-bold text-gray-800 mb-4">Pilihan Pembayaran</h2>
-            <div class="flex bg-gray-100 p-1 rounded-lg mb-4">
-                <button class="flex-1 flex items-center justify-center gap-2 bg-blue-600 text-white py-2 rounded-md shadow-sm">
-                    <span>🏦</span> Transfer Bank
-                </button>
-                <button class="flex-1 flex items-center justify-center gap-2 text-gray-500 py-2">
-                    <span>📱</span> E-Wallet/QRIS
-                </button>
-                <button class="flex-1 flex items-center justify-center gap-2 text-gray-500 py-2">
-                    <span>🏪</span> Gerai Ritel
-                </button>
-            </div>
-            <p class="text-xs text-gray-500 leading-relaxed">
-                Transfer Otomatis via Virtual Account (Mandiri, BCA, BRI, BNI). Instruksi akan dikirim setelah konfirmasi donasi.
-            </p>
-        </div>
+                <div class="space-y-8 text-gray-700 leading-relaxed">
+                    <div>
+                        <h3 class="font-semibold text-lg mb-2">
+                            Masa Depan Cerah untuk Generasi Penerus
+                        </h3>
+                        <p>
+                            Pendidikan adalah kunci untuk membuka pintu masa depan yang lebih baik.
+                            Program ini hadir untuk membantu anak-anak yatim dan dhuafa mendapatkan
+                            pendidikan yang layak dan berkelanjutan.
+                        </p>
+                    </div>
 
-        <button class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl transition duration-200 uppercase tracking-wide">
-            Donasi Sekarang
-        </button>
-    </div>
-    </section>
+                    <div>
+                        <h3 class="font-semibold text-lg mb-2">
+                            Dampak Donasi Anda
+                        </h3>
+                        <p>
+                            Donasi Anda digunakan untuk biaya pendidikan, perlengkapan sekolah,
+                            dan pendampingan belajar agar mereka dapat berkembang secara optimal.
+                        </p>
+                    </div>
 
-    <footer class="bg-blue-50 text-blue-900">
-  <div class="max-w-7xl mx-auto px-6 py-14">
+                    <div>
+                        <h3 class="font-semibold text-lg mb-2">
+                            Bagaimana Program Ini Berjalan?
+                        </h3>
+                        <p>
+                            Program dijalankan dengan sistem pendampingan dan pelaporan berkala
+                            sebagai bentuk transparansi kepada para donatur.
+                        </p>
+                    </div>
+                </div>
 
-    <!-- GRID UTAMA -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <!-- GALERI DINAMIS -->
+                <h2 class="text-2xl font-bold mt-16 mb-6 text-center">
+                    Galeri Kegiatan
+                </h2>
 
-      <!-- TENTANG -->
-      <div>
-        <p class="text-sm leading-relaxed text-blue-800">
-          LAZNAS & Panti Yatim berkomitmen untuk menyalurkan amanah donasi Anda
-          dengan transparan dan efektif.
-        </p>
-      </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <?php
+            $galeri = mysqli_query($conn, "SELECT * FROM galeri WHERE status='aktif' ORDER BY id DESC");
+            while ($g = mysqli_fetch_assoc($galeri)) {
+            ?>
+                    <img src="asset/galeri/<?= $g['foto']; ?>"
+                        class="rounded-xl object-cover w-full h-48 hover:scale-105 transition duration-300"
+                        alt="Galeri">
+                    <?php } ?>
+                </div>
 
-      <!-- KONTAK -->
-      <div>
-        <h3 class="font-semibold mb-4">Kontak</h3>
-        <ul class="text-sm space-y-2 text-blue-800">
-          <li>Jl. Raya Condet No. 12, Jakarta Timur</li>
-          <li>info@laznas.org</li>
-          <li>+62 812 3456 7890</li>
-        </ul>
-      </div>
+            </section>
 
-      <!-- TAUTAN CEPAT -->
-      <div>
-        <h3 class="font-semibold mb-4">Tautan Cepat</h3>
-        <ul class="text-sm space-y-2 text-blue-800">
-          <li><a href="#" class="hover:underline">Program Kami</a></li>
-          <li><a href="#" class="hover:underline">Berita & Acara</a></li>
-          <li><a href="#" class="hover:underline">Kalkulator Zakat</a></li>
-          <li><a href="#" class="hover:underline">Tentang Kami</a></li>
-          <li><a href="#" class="hover:underline">FAQ</a></li>
-        </ul>
-      </div>
+            <!-- Footer -->
+            <footer class="bg-blue-50 text-blue-900">
+                <div class="max-w-7xl mx-auto px-6 py-14">
 
-      <!-- SOSIAL MEDIA -->
-      <div>
-        <h3 class="font-semibold mb-4">Sosial Media</h3>
-        <ul class="text-sm space-y-2 text-blue-800">
-          <li><a href="#" class="hover:underline">Facebook</a></li>
-          <li><a href="#" class="hover:underline">Instagram</a></li>
-          <li><a href="#" class="hover:underline">Twitter</a></li>
-          <li><a href="#" class="hover:underline">YouTube</a></li>
-        </ul>
-      </div>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
 
-    </div>
+                        <div>
+                            <p class="text-sm leading-relaxed text-blue-800">
+                                LAZNAS & Panti Yatim berkomitmen menyalurkan donasi secara transparan
+                                dan tepat sasaran.
+                                =======
+                            <section class="relative">
+                                <img src="asset/galeri/bander.jpeg" alt="Donasi Pendidikan"
+                                    class="w-full h-[420px] object-cover" />
 
-    <!-- LEGALITAS -->
-    <div class="mt-12">
-      <h3 class="font-semibold mb-3">Legalitas</h3>
-      <ul class="text-sm space-y-2 text-blue-800">
-        <li><a href="#" class="hover:underline">Kebijakan Privasi</a></li>
-        <li><a href="#" class="hover:underline">Syarat & Ketentuan</a></li>
-        <li><a href="#" class="hover:underline">Transparansi</a></li>
-      </ul>
-    </div>
+                                <section class="max-w-5xl mx-auto px-6 py-12">
 
-    <!-- GARIS -->
-    <hr class="my-8 border-blue-200">
+                                    <!-- DETAIL PROGRAM -->
+                                    <h2 class="text-2xl font-bold mb-6 text-center">
+                                        Detail Program
+                                    </h2>
 
-    <!-- COPYRIGHT -->
-    <p class="text-center text-xs text-blue-700">
-      © 2025 LAZNAS & Panti Yatim. All rights reserved.
-    </p>
-  </div>
-</footer>
+                                    <div class="space-y-8 text-gray-700 leading-relaxed">
+
+                                        <div>
+                                            <h3 class="font-semibold text-lg mb-2">
+                                                Masa Depan Cerah untuk Generasi Penerus
+                                            </h3>
+                                            <p>
+                                                Pendidikan adalah kunci untuk membuka pintu masa depan yang lebih baik.
+                                                Bagi anak-anak yatim dan dhuafa, akses terhadap pendidikan seringkali
+                                                terhambat oleh keterbatasan finansial. Program Beasiswa Yatim dan Dhuafa
+                                                hadir untuk memastikan bahwa setiap anak memiliki kesempatan yang sama
+                                                untuk meraih impian dan potensi terbaik mereka. Melalui program ini,
+                                                kami
+                                                menyediakan bantuan biaya pendidikan, perlengkapan sekolah, serta
+                                                dukungan mentoring agar mereka dapat belajar dengan tenang dan fokus.
+                                                >>>>>>> 63c3877074a519eb69ed95c735c6502c9f13d074
+                                            </p>
+                                        </div>
+
+                                        <div>
+                                            <<<<<<< HEAD <h3 class="font-semibold mb-4">Kontak</h3>
+                                                <ul class="text-sm space-y-2 text-blue-800">
+                                                    <li>Jl. Raya Condet No. 12</li>
+                                                    <li>info@laznas.org</li>
+                                                    <li>+62 812 3456 7890</li>
+                                                </ul>
+                                        </div>
+
+                                        <div>
+                                            <h3 class="font-semibold mb-4">Tautan Cepat</h3>
+                                            <ul class="text-sm space-y-2 text-blue-800">
+                                                <li><a href="#" class="hover:underline">Program Kami</a></li>
+                                                <li><a href="#" class="hover:underline">Kalkulator Zakat</a></li>
+                                                <li><a href="#" class="hover:underline">Tentang Kami</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div>
+                                            <h3 class="font-semibold mb-4">Sosial Media</h3>
+                                            <ul class="text-sm space-y-2 text-blue-800">
+                                                <li>Instagram</li>
+                                                <li>Facebook</li>
+                                                <li>YouTube</li>
+                                                =======
+                                                <h3 class="font-semibold text-lg mb-2">
+                                                    Dampak Donasi Anda
+                                                </h3>
+                                                <p>
+                                                    Setiap rupiah donasi Anda akan langsung disalurkan untuk kebutuhan
+                                                    pendidikan mereka. Ini mencakup biaya SPP, buku pelajaran, seragam,
+                                                    transportasi, hingga bimbingan belajar tambahan. Dengan pendidikan
+                                                    yang
+                                                    layak, anak-anak ini tidak hanya akan meningkatkan kualitas hidup
+                                                    mereka
+                                                    sendiri, tetapi juga menjadi agen perubahan positif di masyarakat.
+                                                    Mari
+                                                    bersama-sama kita wujudkan harapan mereka untuk masa depan yang
+                                                    lebih
+                                                    cerah dan mandiri.
+                                                </p>
+                                        </div>
+
+                                        <div>
+                                            <h3 class="font-semibold text-lg mb-2">
+                                                Bagaimana Program Ini Berjalan?
+                                            </h3>
+                                            <p>
+                                                Kami bekerja sama dengan sekolah-sekolah dan komunitas lokal untuk
+                                                mengidentifikasi anak-anak yang paling membutuhkan. Setelah melalui
+                                                proses seleksi yang ketat, para penerima beasiswa akan didampingi oleh
+                                                tim pendamping kami. Laporan progres akademik dan kegiatan akan
+                                                disampaikan kepada para donatur secara berkala sebagai bentuk
+                                                transparansi dan akuntabilitas. Bergabunglah dengan kami untuk
+                                                menciptakan gelombang kebaikan melalui pendidikan!
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- GALERI -->
+                                    <h2 class="text-2xl font-bold mt-16 mb-6 text-center">Galeri Kegiatan</h2>
+
+                                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                        <img src="asset/galeri/program1.jpeg"
+                                            class="rounded-xl object-cover w-full h-48" alt="">
+                                        <img src="asset/galeri/program2.jpeg"
+                                            class="rounded-xl object-cover w-full h-48" alt="">
+                                        <img src="asset/galeri/program3.jpeg"
+                                            class="rounded-xl object-cover w-full h-48" alt="">
+                                        <img src="asset/galeri/program4.jpeg"
+                                            class="rounded-xl object-cover w-full h-48" alt="">
+                                        <img src="asset/galeri/program5.jpeg"
+                                            class="rounded-xl object-cover w-full h-48" alt="">
+                                        <img src="asset/galeri/program6.jpeg"
+                                            class="rounded-xl object-cover w-full h-48" alt="">
+                                    </div>
+                                </section>
+
+
+                                <footer class="bg-blue-50 text-gray-700">
+                                    <div class="max-w-7xl mx-auto px-6 py-12">
+
+                                        <!-- Grid Utama -->
+                                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                                            <!-- Deskripsi -->
+                                            <div>
+                                                <p class="text-sm leading-relaxed">
+                                                    LAZNAS & Panti Yatim berkomitmen untuk menyalurkan amanah donasi
+                                                    Anda
+                                                    dengan transparan dan efektif.
+                                                </p>
+                                            </div>
+
+                                            <!-- Kontak -->
+                                            <div>
+                                                <h3 class="font-semibold mb-4">Kontak</h3>
+                                                <ul class="space-y-2 text-sm">
+                                                    <li>Jl. Ophir II No. 6A RT 007/RW 001, Kelurahan
+                                                        Gunung, Kecamatan Kebayoran Baru, Jakarta Selatan</li>
+                                                    <li>
+                                                        <a href="mailto:info@aksinyata.org" class="hover:text-blue-600">
+                                                            info@aksinyata.org
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="tel:+6281234567890" class="hover:text-blue-600">
+                                                            0877-1199-9023
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- Tautan Cepat -->
+                                            <div>
+                                                <h3 class="font-semibold mb-4">Tautan Cepat</h3>
+                                                <ul class="space-y-2 text-sm">
+                                                    <li><a href="#" class="hover:text-blue-600">Program Kami</a></li>
+                                                    <li><a href="#" class="hover:text-blue-600">Berita & Acara</a></li>
+                                                    <li><a href="#" class="hover:text-blue-600">Kalkulator Zakat</a>
+                                                    </li>
+                                                    <li><a href="#" class="hover:text-blue-600">Tentang Kami</a></li>
+                                                    <li><a href="#" class="hover:text-blue-600">FAQ</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- Sosial Media -->
+                                            <div>
+                                                <h3 class="font-semibold mb-4">Sosial Media</h3>
+                                                <ul class="space-y-2 text-sm">
+                                                    <li><a href="#" class="hover:text-blue-600">Facebook</a></li>
+                                                    <li><a href="#" class="hover:text-blue-600">Instagram</a></li>
+                                                    <li><a href="#" class="hover:text-blue-600">Twitter</a></li>
+                                                    <li><a href="#" class="hover:text-blue-600">Youtube</a></li>
+                                                    >>>>>>> 63c3877074a519eb69ed95c735c6502c9f13d074
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                        <<<<<<< HEAD <hr class="my-8 border-blue-200">
+
+                                            <p class="text-center text-xs text-blue-700">
+                                                © 2025 LAZNAS & Panti Yatim. All rights reserved.
+                                            </p>
+
+                                    </div>
+                                </footer>
+
+                                =======
+                                <!-- Legalitas -->
+                                <div class="mt-10">
+                                    <h3 class="font-semibold mb-3">Legalitas</h3>
+                                    <ul class="space-y-2 text-sm">
+                                        <li><a href="#" class="hover:text-blue-600">Kebijakan Privasi</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Syarat & Ketentuan</a></li>
+                                        <li><a href="#" class="hover:text-blue-600">Transparansi</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Divider -->
+                                <div class="border-t border-gray-300 mt-8 pt-6 text-center text-sm text-gray-500">
+                                    © 2025 LAZNAS & Panti Yatim. All rights reserved.
+                                </div>
+
+                        </div>
+            </footer>
+            >>>>>>> 63c3877074a519eb69ed95c735c6502c9f13d074
     </body>
+
 </html>
