@@ -1,7 +1,7 @@
 <?php
 include 'config/koneksi.php';
 
-$query = mysqli_query($conn, "SELECT * FROM berita ORDER BY id DESC");
+$query = mysqli_query($conn, 'SELECT * FROM berita ORDER BY id DESC');
 $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
 
@@ -27,19 +27,16 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
                     <a href="index.php" class="text-blue-600">Beranda</a>
                     <a href="program.php" class="text-gray-600 hover:text-blue-600">Program Unggulan</a>
-                    <<<<<<< HEAD=======<a href="berita.php" class="text-gray-600 hover:text-blue-600">Berita Terbaru</a>
-                        >>>>>>> 63c3877074a519eb69ed95c735c6502c9f13d074
-                        <a href="kalkulator.php" class="text-gray-600 hover:text-blue-600">Kalkulator Zakat</a>
-                        <a href="tentang.php" class="text-gray-600 hover:text-blue-600">Tentang Kami</a>
+                    <a href="berita.php" class="text-gray-600 hover:text-blue-600">Berita Terbaru</a>
+                    <a href="kalkulator.php" class="text-gray-600 hover:text-blue-600">Kalkulator Zakat</a>
+                    <a href="tentang.php" class="text-gray-600 hover:text-blue-600">Tentang Kami</a>
                 </div>
 
                 <div class="flex items-center gap-4">
-                    <<<<<<< HEAD <a href="form_donasi.php"=======<a href="donasi.php">>>>>>>
-                        63c3877074a519eb69ed95c735c6502c9f13d074
-                        class="bg-green-500 hover:bg-green-600 text-white text-xs md:text-sm font-semibold px-5 py-2.5
-                        rounded-md transition">
+                    <a href="form_donasi.php"
+                        class="bg-green-500 hover:bg-green-600 text-white text-xs md:text-sm font-semibold px-5 py-2.5 rounded-md transition">
                         DONASI SEKARANG
-                        </a>
+                    </a>
                 </div>
             </div>
         </div>
@@ -263,8 +260,8 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-                <?php if (!empty($data_berita)) : ?>
-                <?php foreach ($data_berita as $berita) : ?>
+                <?php if (!empty($data_berita)): ?>
+                <?php foreach ($data_berita as $berita): ?>
 
                 <a href="detail_berita.php?id=<?= $berita['id'] ?>"
                     class="block bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 overflow-hidden">
@@ -283,7 +280,7 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 </a>
 
                 <?php endforeach; ?>
-                <?php else : ?>
+                <?php else: ?>
                 <p class="col-span-4 text-center text-gray-600 p-8">
                     Belum ada berita terbaru untuk ditampilkan.
                 </p>
