@@ -47,11 +47,11 @@ $totalNishab = $hargaEmas * $nishabEmas;
                 </div>
 
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
-                    <a href="index.php" class="text-gray-600 hover:text-emerald-600 transition">Beranda</a>
-                    <a href="program.php" class="text-gray-600 hover:text-emerald-600 transition">Program</a>
-                    <a href="berita.php" class="text-gray-600 hover:text-emerald-600 transition">Berita</a>
-                    <a href="kalkulator.php" class="text-emerald-600">Kalkulator Zakat</a>
-                    <a href="tentang.php" class="text-gray-600 hover:text-emerald-600 transition">Tentang Kami</a>
+                    <a href="index.php" class="text-gray-600 hover:text-blue-600 transition">Beranda</a>
+                    <a href="program.php" class="text-gray-600 hover:text-blue-600 transition">Program</a>
+                    <a href="berita.php" class="text-gray-600 hover:text-blue-600 transition">Berita</a>
+                    <a href="kalkulator.php" class="text-blue-600">Kalkulator Zakat</a>
+                    <a href="tentang.php" class="text-gray-600 hover:text-blue-600 transition">Tentang Kami</a>
                 </div>
 
                 <div class="flex items-center gap-4">
