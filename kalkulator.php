@@ -7,20 +7,6 @@ $hargaPerak = 40613;
 $totalHarta = 0;
 $totalZakat = 0;
 
-<<<<<<< HEAD
-          <!-- Button -->
-          <div class="flex items-center gap-4">
-            <a
-              href="#"
-              class="bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-5 py-3 rounded-md transition"
-            > juw jw iw 8rri 
-              DONASI SEKARANG
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
-=======
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $emas      = ($_POST['emas'] ?? 0) * $hargaEmas;
     $perak     = ($_POST['perak'] ?? 0) * $hargaPerak;
@@ -28,8 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $properti  = $_POST['properti'] ?? 0;
     $kendaraan = $_POST['kendaraan'] ?? 0;
     $saham     = $_POST['saham'] ?? 0;
-    $lainnya   = $_POST['lainnya'] ?? 0;
->>>>>>> origin/main
+        $lainnya   = $_POST['lainnya'] ?? 0;
 
     $totalHarta = $emas + $perak + $uang + $properti + $kendaraan + $saham + $lainnya;
     $totalZakat = $totalHarta * 0.025;
