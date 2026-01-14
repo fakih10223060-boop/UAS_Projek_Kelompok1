@@ -27,13 +27,12 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
                     <a href="index.php" class="text-blue-600">Beranda</a>
                     <a href="program.php" class="text-gray-600 hover:text-blue-600">Program Unggulan</a>
-                    <a href="berita.php" class="text-gray-600 hover:text-blue-600">Berita Terbaru</a>
                     <a href="kalkulator.php" class="text-gray-600 hover:text-blue-600">Kalkulator Zakat</a>
                     <a href="tentang.php" class="text-gray-600 hover:text-blue-600">Tentang Kami</a>
                 </div>
 
                 <div class="flex items-center gap-4">
-                    <a href="donasi.php"
+                    <a href="form_donasi.php"
                         class="bg-green-500 hover:bg-green-600 text-white text-xs md:text-sm font-semibold px-5 py-2.5 rounded-md transition">
                         DONASI SEKARANG
                     </a>
@@ -57,7 +56,7 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
                     yatim dan dhuafa. Mari bersama membangun generasi cerdas dan
                     berakhlak mulia.
                 </p>
-                <a href="donasi.php"
+                <a href="form_donasi.php"
                     class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-3 rounded-lg transition transform hover:scale-105">
                     Donasi Pendidikan Sekarang
                 </a>
