@@ -27,15 +27,19 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
                     <a href="index.php" class="text-blue-600">Beranda</a>
                     <a href="program.php" class="text-gray-600 hover:text-blue-600">Program Unggulan</a>
-                    <a href="kalkulator.php" class="text-gray-600 hover:text-blue-600">Kalkulator Zakat</a>
-                    <a href="tentang.php" class="text-gray-600 hover:text-blue-600">Tentang Kami</a>
+                    <<<<<<< HEAD=======<a href="berita.php" class="text-gray-600 hover:text-blue-600">Berita Terbaru</a>
+                        >>>>>>> 63c3877074a519eb69ed95c735c6502c9f13d074
+                        <a href="kalkulator.php" class="text-gray-600 hover:text-blue-600">Kalkulator Zakat</a>
+                        <a href="tentang.php" class="text-gray-600 hover:text-blue-600">Tentang Kami</a>
                 </div>
 
                 <div class="flex items-center gap-4">
-                    <a href="form_donasi.php"
-                        class="bg-green-500 hover:bg-green-600 text-white text-xs md:text-sm font-semibold px-5 py-2.5 rounded-md transition">
+                    <<<<<<< HEAD <a href="form_donasi.php"=======<a href="donasi.php">>>>>>>
+                        63c3877074a519eb69ed95c735c6502c9f13d074
+                        class="bg-green-500 hover:bg-green-600 text-white text-xs md:text-sm font-semibold px-5 py-2.5
+                        rounded-md transition">
                         DONASI SEKARANG
-                    </a>
+                        </a>
                 </div>
             </div>
         </div>
@@ -308,17 +312,25 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 <div>
                     <h3 class="font-semibold mb-4">Kontak</h3>
                     <ul class="space-y-2 text-sm">
-                        <li>Jl. Raya Condet No. 12, Jakarta Timur</li>
-                        <li>
-                            <a href="mailto:info@laznas.org" class="hover:text-blue-600">
-                                info@laznas.org
-                            </a>
-                        </li>
-                        <li>
-                            <a href="tel:+6281234567890" class="hover:text-blue-600">
-                                +62 812 3456 7890
-                            </a>
-                        </li>
+                        <<<<<<< HEAD <li>Jl. Raya Condet No. 12, Jakarta Timur</li>
+                            <li>
+                                <a href="mailto:info@laznas.org" class="hover:text-blue-600">
+                                    info@laznas.org
+                                    =======
+                            <li>Jl. Ophir II No. 6A RT 007/RW 001, Kelurahan
+                                Gunung, Kecamatan Kebayoran Baru, Jakarta Selatan</li>
+                            <li>
+                                <a href="mailto:info@aksinyata.org" class="hover:text-blue-600">
+                                    info@aksinyata.org
+                                    >>>>>>> 63c3877074a519eb69ed95c735c6502c9f13d074
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+6281234567890" class="hover:text-blue-600">
+                                    <<<<<<< HEAD +62 812 3456 7890=======0877-1199-9023>>>>>>>
+                                        63c3877074a519eb69ed95c735c6502c9f13d074
+                                </a>
+                            </li>
                     </ul>
                 </div>
 
