@@ -310,7 +310,7 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
                     <h3 class="font-semibold mb-4">Kontak</h3>
                     <ul class="space-y-2 text-sm">
                         <li>Jl. Ophir II No. 6A RT 007/RW 001, Kelurahan
-Gunung, Kecamatan Kebayoran Baru, Jakarta Selatan</li>
+                            Gunung, Kecamatan Kebayoran Baru, Jakarta Selatan</li>
                         <li>
                             <a href="mailto:info@aksinyata.org" class="hover:text-blue-600">
                                 info@aksinyata.org

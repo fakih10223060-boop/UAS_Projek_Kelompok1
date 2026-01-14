@@ -27,7 +27,7 @@ keluarga prasejahtera.
         ],
         [
             "nama" => "Ahmad Fakih",
-            "jabatan" => "Donatur Rutin",
+            "jabatan" => "Donatur Tetap",
             "pesan" => "Laporannya sangat detail. Saya bisa melihat dampak nyata dari setiap rupiah yang saya donasikan."
         ]
     ]
