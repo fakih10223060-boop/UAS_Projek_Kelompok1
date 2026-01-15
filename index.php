@@ -1,7 +1,7 @@
 <?php
 include 'config/koneksi.php';
 
-$query = mysqli_query($conn, "SELECT * FROM berita ORDER BY id DESC");
+$query = mysqli_query($conn, 'SELECT * FROM berita ORDER BY id DESC');
 $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
 ?>
 
@@ -25,15 +25,15 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 </div>
 
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
-                    <a href="index.php" class="text-blue-600">Beranda</a>
-                    <a href="program.php" class="text-gray-600 hover:text-blue-600">Program Unggulan</a>
-                    <a href="berita.php" class="text-gray-600 hover:text-blue-600">Berita Terbaru</a>
-                    <a href="kalkulator.php" class="text-gray-600 hover:text-blue-600">Kalkulator Zakat</a>
-                    <a href="tentang.php" class="text-gray-600 hover:text-blue-600">Tentang Kami</a>
+                    <a href="index.php" class="text-blue-600 font-bold">Beranda</a>
+                    <a href="program.php" class="text-gray-600 hover:text-blue-600 transition">Program</a>
+                    <a href="berita.php" class="text-gray-600 hover:text-blue-600 transition">Berita</a>
+                    <a href="kalkulator.php" class="text-gray-600 hover:text-blue-600 transition">Kalkulator Zakat</a>
+                    <a href="tentang.php" class="text-gray-600 hover:text-blue-600 transition">Tentang Kami</a>
                 </div>
 
                 <div class="flex items-center gap-4">
-                    <a href="donasi.php"
+                    <a href="form_donasi.php"
                         class="bg-green-500 hover:bg-green-600 text-white text-xs md:text-sm font-semibold px-5 py-2.5 rounded-md transition">
                         DONASI SEKARANG
                     </a>
@@ -57,7 +57,7 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
                     yatim dan dhuafa. Mari bersama membangun generasi cerdas dan
                     berakhlak mulia.
                 </p>
-                <a href="donasi.php"
+                <a href="form_donasi.php"
                     class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-3 rounded-lg transition transform hover:scale-105">
                     Donasi Pendidikan Sekarang
                 </a>
@@ -260,8 +260,8 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-                <?php if (!empty($data_berita)) : ?>
-                <?php foreach ($data_berita as $berita) : ?>
+                <?php if (!empty($data_berita)): ?>
+                <?php foreach ($data_berita as $berita): ?>
 
                 <a href="detail_berita.php?id=<?= $berita['id'] ?>"
                     class="block bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 overflow-hidden">
@@ -280,7 +280,7 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 </a>
 
                 <?php endforeach; ?>
-                <?php else : ?>
+                <?php else: ?>
                 <p class="col-span-4 text-center text-gray-600 p-8">
                     Belum ada berita terbaru untuk ditampilkan.
                 </p>
@@ -309,8 +309,15 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 <div>
                     <h3 class="font-semibold mb-4">Kontak</h3>
                     <ul class="space-y-2 text-sm">
+<<<<<<< HEAD
+                        <li>Jl. Raya Condet No. 12, Jakarta Timur</li>
+                        <li>
+                            <a href="mailto:info@laznas.org" class="hover:text-blue-600">
+                                info@laznas.org
+=======
+>>>>>>> origin/main
                         <li>Jl. Ophir II No. 6A RT 007/RW 001, Kelurahan
-Gunung, Kecamatan Kebayoran Baru, Jakarta Selatan</li>
+                            Gunung, Kecamatan Kebayoran Baru, Jakarta Selatan</li>
                         <li>
                             <a href="mailto:info@aksinyata.org" class="hover:text-blue-600">
                                 info@aksinyata.org
@@ -318,7 +325,6 @@ Gunung, Kecamatan Kebayoran Baru, Jakarta Selatan</li>
                         </li>
                         <li>
                             <a href="tel:+6281234567890" class="hover:text-blue-600">
-                                0877-1199-9023
                             </a>
                         </li>
                     </ul>

@@ -60,9 +60,9 @@ $page = $_GET['page'] ?? 'home';
                     <span>🖼️</span> Galeri
                 </a>
 
-                <a href="dashboard.php?page=pesan"
-                    class="flex items-center gap-3 px-4 py-3 rounded-lg <?= active('pesan', $page) ?>">
-                    <span>✉️</span> Pesan Masuk
+                <a href="dashboard.php?page=datadonasi"
+                    class="flex items-center gap-3 px-4 py-3 rounded-lg <?= active('datadonasi', $page) ?>">
+                    <span>✉️</span> Data Donasi
                 </a>
             </nav>
 
@@ -108,11 +108,20 @@ $page = $_GET['page'] ?? 'home';
                 case 'hapus_berita':
                     include "hapus_berita.php";
                     break;
+
+                    
+                    
                 case 'galeri':
                     include "galeri.php";
                     break;
-                case 'pesan':
-                    include "pesan.php";
+                case 'hapus_galerikegiatan':
+                    include "hapus_galerikegiatan.php";
+                    break;
+                case 'tambah_galerikegiatan':
+                    include "tambah_galerikegiatan.php";
+                    break;
+                case 'datadonasi':
+                    include "datadonasi.php";
                     break;
                 default:
                     include "home.php";
