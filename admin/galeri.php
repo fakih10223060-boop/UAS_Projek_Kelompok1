@@ -5,7 +5,7 @@ include __DIR__ . '/../config/koneksi.php';
 
 // CEK KONEKSI
 if (!isset($conn)) {
-    die("Koneksi database tidak ditemukan. Pastikan path ../config/koneksi.php benar.");
+    die("Koneksi database tidak ditemukan. Pastikan path '/../config/koneksi.php benar.");
 }
 
 // 2. LOGIKA HAPUS FOTO
