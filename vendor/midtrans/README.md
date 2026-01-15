@@ -1010,3 +1010,6 @@ There are several guides that must be taken care of when you develop new plugins
 1. __Handling currency other than IDR.__ Midtrans `v1` and `v2` currently accepts payments in Indonesian Rupiah only. As a corrolary, there is a validation on the server to check whether the item prices are in integer or not. As much as you are tempted to round-off the price, DO NOT do that! Always prepare when your system uses currencies other than IDR, convert them to IDR accordingly, and only round the price AFTER that.
 
 2. Consider using the __auto-sanitization__ feature.
+
+
+ahmad
