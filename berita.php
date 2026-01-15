@@ -30,7 +30,7 @@
 
                 <!-- Button -->
                 <div>
-                    <a href="#"
+                    <a href="form_donasi.php"
                         class="bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-5 py-2 rounded-md transition">
                         DONASI SEKARANG
                     </a>
