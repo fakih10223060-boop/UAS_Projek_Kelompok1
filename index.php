@@ -309,25 +309,17 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 <div>
                     <h3 class="font-semibold mb-4">Kontak</h3>
                     <ul class="space-y-2 text-sm">
-                        <<<<<<< HEAD <li>Jl. Raya Condet No. 12, Jakarta Timur</li>
-                            <li>
-                                <a href="mailto:info@laznas.org" class="hover:text-blue-600">
-                                    info@laznas.org
-                                    =======
-                            <li>Jl. Ophir II No. 6A RT 007/RW 001, Kelurahan
-                                Gunung, Kecamatan Kebayoran Baru, Jakarta Selatan</li>
-                            <li>
-                                <a href="mailto:info@aksinyata.org" class="hover:text-blue-600">
-                                    info@aksinyata.org
-                                    >>>>>>> 63c3877074a519eb69ed95c735c6502c9f13d074
-                                </a>
-                            </li>
-                            <li>
-                                <a href="tel:+6281234567890" class="hover:text-blue-600">
-                                    <<<<<<< HEAD +62 812 3456 7890=======0877-1199-9023>>>>>>>
-                                        63c3877074a519eb69ed95c735c6502c9f13d074
-                                </a>
-                            </li>
+                        <li>Jl. Ophir II No. 6A RT 007/RW 001, Kelurahan
+                            Gunung, Kecamatan Kebayoran Baru, Jakarta Selatan</li>
+                        <li>
+                            <a href="mailto:info@aksinyata.org" class="hover:text-blue-600">
+                                info@aksinyata.org
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+6281234567890" class="hover:text-blue-600">
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
