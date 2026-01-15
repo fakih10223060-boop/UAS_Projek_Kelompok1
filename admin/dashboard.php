@@ -108,9 +108,17 @@ $page = $_GET['page'] ?? 'home';
                 case 'hapus_berita':
                     include "hapus_berita.php";
                     break;
+                                       
                 case 'galeri':
                     include "galeri.php";
                     break;
+                case 'tambah_galeri':
+                    include "tambah_galeri.php";
+                    break;
+                case 'hapus_galeri':
+                    include "hapus_galeri.php";
+                    break;
+
                 case 'datadonasi':
                     include "datadonasi.php";
                     break;
