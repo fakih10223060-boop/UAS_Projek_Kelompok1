@@ -35,7 +35,7 @@ if (isset($conn)) {
                 </div>
 
                 <div class="flex items-center gap-4">
-                    <a href="donasi.php"
+                    <a href="form_donasi.php"
                         class="bg-green-500 hover:bg-green-600 text-white text-xs md:text-sm font-semibold px-5 py-2.5 rounded-md transition">
                         DONASI SEKARANG
                     </a>
