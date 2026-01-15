@@ -114,12 +114,15 @@ $page = $_GET['page'] ?? 'home';
                 case 'galeri':
                     include "galeri.php";
                     break;
+<<<<<<< HEAD
                 case 'hapus_galerikegiatan':
                     include "hapus_galerikegiatan.php";
                     break;
                 case 'tambah_galerikegiatan':
                     include "tambah_galerikegiatan.php";
                     break;
+=======
+>>>>>>> origin/main
                 case 'datadonasi':
                     include "datadonasi.php";
                     break;
