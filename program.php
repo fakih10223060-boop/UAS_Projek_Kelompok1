@@ -1,6 +1,3 @@
-<?php
-include 'config/panti_admin.php';
-?>
 <!DOCTYPE html>
 <html lang="id">
 
