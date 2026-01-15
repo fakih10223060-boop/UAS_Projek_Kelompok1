@@ -175,6 +175,46 @@
             </div>
         </div>
     </section>
+    <section class="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
+
+        <div class="absolute inset-0 w-full h-full z-0">
+            <iframe class="w-full h-full object-cover filter grayscale opacity-70" frameborder="0" scrolling="no"
+                marginheight="0" marginwidth="0" title="Peta Lokasi" /* LINK EMBED YANG BENAR (Tidak akan error refused
+                to connect) */
+                src="https://maps.google.com/maps?q=Jl.+Raya+Pos+Pengumben,+Jakarta+Barat&t=&z=15&ie=UTF8&iwloc=&output=embed">
+            </iframe>
+        </div>
+
+        <div class="absolute inset-0 bg-black/60 z-10"></div>
+
+        <div class="relative z-20 max-w-4xl mx-auto px-6 text-center text-white">
+
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
+                Lokasi Kantor Kami
+            </h2>
+
+            <p class="text-lg md:text-xl leading-relaxed font-light mb-8 drop-shadow-md">
+                Kunjungi kami di <span class="font-semibold text-green-400">Aksinyata Foundation</span>.<br>
+                Jl. Raya Pos Pengumben, Kelurahan Gunung, Kecamatan Kebayoran Baru, Daerah Khusus Ibukota Jakarta.
+            </p>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Raya+Pos+Pengumben,+Jakarta+Barat"
+                target="_blank"
+                class="inline-flex items-center gap-3 bg-green-600 hover:bg-green-500 text-white px-8 py-4 rounded-full font-bold text-sm md:text-base shadow-lg transition transform hover:-translate-y-1 hover:shadow-green-500/50 border border-green-400">
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Buka di Google Maps
+            </a>
+
+        </div>
+
+    </section>
 
     <footer class="bg-blue-50 text-gray-700">
         <div class="max-w-7xl mx-auto px-6 py-12">
