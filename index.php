@@ -309,6 +309,13 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 <div>
                     <h3 class="font-semibold mb-4">Kontak</h3>
                     <ul class="space-y-2 text-sm">
+<<<<<<< HEAD
+                        <li>Jl. Raya Condet No. 12, Jakarta Timur</li>
+                        <li>
+                            <a href="mailto:info@laznas.org" class="hover:text-blue-600">
+                                info@laznas.org
+=======
+>>>>>>> origin/main
                         <li>Jl. Ophir II No. 6A RT 007/RW 001, Kelurahan
                             Gunung, Kecamatan Kebayoran Baru, Jakarta Selatan</li>
                         <li>
