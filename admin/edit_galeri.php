@@ -7,12 +7,12 @@ if (isset($_POST['update'])) {
     $caption = $_POST['caption'];
 
     mysqli_query($conn, "
-        UPDATE berita SET
+        UPDATE galeri SET
         judul='$judul',
         caption='$caption'
         WHERE id=$id
     ");
 
-    header("Location: galerikegiatan.php");
+    header("Location: galeri.php");
 }
 ?>
