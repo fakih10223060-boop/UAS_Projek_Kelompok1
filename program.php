@@ -1,11 +1,3 @@
-<?php
-include 'config/koneksi.php';
-
-// Ambil data galeri di awal agar rapi
-if (isset($conn)) {
-    $query_galeri = mysqli_query($conn, "SELECT * FROM galeri WHERE status='aktif' ORDER BY id DESC LIMIT 6");
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
