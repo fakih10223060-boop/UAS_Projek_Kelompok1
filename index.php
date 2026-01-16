@@ -192,7 +192,7 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 <img src="asset/galeri/program2.jpeg" alt="Bantuan Pangan" class="w-full h-44 object-cover" />
                 <div class="p-4 text-center">
                     <h3 class="font-semibold mb-4">Bantuan Pangan Korban Bencana</h3>
-                    <a href="#"
+                    <a href="bantuan.php"
                         class="inline-block border border-gray-300 px-6 py-2 rounded-md text-sm hover:bg-blue-600 hover:text-white hover:border-blue-600 transition">
                         Lihat Detail
                     </a>
@@ -230,7 +230,7 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 <img src="asset/galeri/program5.jpeg" alt="Peduli Yatim" class="w-full h-44 object-cover" />
                 <div class="p-4 text-center">
                     <h3 class="font-semibold mb-4">Peduli Yatim Dhuafa</h3>
-                    <a href="#"
+                    <a href="peduli.php"
                         class="inline-block border border-gray-300 px-6 py-2 rounded-md text-sm hover:bg-blue-600 hover:text-white hover:border-blue-600 transition">
                         Lihat Detail
                     </a>
