@@ -29,8 +29,6 @@ $query = mysqli_query($conn, "SELECT * FROM donasi ORDER BY id DESC");
                         <th class="px-4 py-3 text-left">Email</th>
                         <th class="px-4 py-3 text-left">Nominal</th>
                         <th class="px-4 py-3 text-left">Status</th>
-                        <th class="px-4 py-3 text-left">Payment</th>
-                        <th class="px-4 py-3 text-left">Transaction ID</th>
                         <th class="px-4 py-3 text-left">Tanggal</th>
                     </tr>
                 </thead>
@@ -42,7 +40,6 @@ $query = mysqli_query($conn, "SELECT * FROM donasi ORDER BY id DESC");
                         <td class="px-4 py-3"><?= $row['email'] ?></td>
                         <td class="px-4 py-3 font-semibold text-green-600">
                             Rp<?= number_format($row['jumlah'] ?? 0, 0, ',', '.') ?>
-
                         </td>
                         <td class="px-4 py-3">
                             <?php if($row['status'] == 'success'): ?>
@@ -58,12 +55,6 @@ $query = mysqli_query($conn, "SELECT * FROM donasi ORDER BY id DESC");
                                 Failed
                             </span>
                             <?php endif; ?>
-                        </td>
-                        <td class="px-4 py-3 capitalize text-gray-700">
-                            <?= $row['payment_type'] ?? '-' ?>
-                        </td>
-                        <td class="px-4 py-3 text-xs text-gray-600">
-                            <?= $row['transaction_id'] ?? '-' ?>
                         </td>
                         <td class="px-4 py-3 text-gray-600">
                             <?= date('d-m-Y H:i', strtotime($row['created_at'])) ?>
