@@ -1,45 +1,56 @@
 <?php
-include "../config/koneksi.php";
+// 1. Sertakan file konfigurasi dan koneksi
+require_once __DIR__ . '/../config/Midtrans.php'; // Berisi Server Key yang aman
+include "../config/koneksi.php"; 
 
-// Ambil data JSON dari Midtrans
-$raw = file_get_contents("php://input");
+// Gunakan namespace Midtrans
+use Midtrans\Notification;
 
-// Kalau dibuka lewat browser (tidak ada JSON)
-if (empty($raw)) {
-    echo "Callback endpoint OK";
-    exit;
+try {
+    // 2. Inisialisasi notifikasi dari Midtrans
+    $notif = new Notification();
+} catch (\Exception $e) {
+    exit("Gagal memproses notifikasi: " . $e->getMessage());
 }
 
-// Decode JSON
-$data = json_decode($raw, true);
+// 3. Ambil data penting dari notifikasi
+$transaction = $notif->transaction_status;
+$type = $notif->payment_type;
+$order_id = $notif->order_id;
+$fraud = $notif->fraud_status;
 
-// Kalau JSON rusak
-if (!$data) {
-    http_response_code(400);
-    exit;
+// 4. Tentukan status yang akan disimpan ke database
+$status_db = 'pending';
+
+if ($transaction == 'settlement' || $transaction == 'capture') {
+    // Untuk kartu kredit (capture), pastikan bukan fraud
+    if ($type == 'credit_card') {
+        if ($fraud == 'challenge') {
+            $status_db = 'challenge';
+        } else {
+            $status_db = 'success';
+        }
+    } else {
+        $status_db = 'success';
+    }
+} else if ($transaction == 'pending') {
+    $status_db = 'pending';
+} else if ($transaction == 'deny' || $transaction == 'expire' || $transaction == 'cancel') {
+    $status_db = 'failed';
 }
 
-// Ambil data
-$order_id = $data['order_id'] ?? '';
-$transaction_status = $data['transaction_status'] ?? '';
-
-// Mapping status
-$status = 'pending';
-
-if ($transaction_status == 'settlement' || $transaction_status == 'capture') {
-    $status = 'success';
-} elseif ($transaction_status == 'expire') {
-    $status = 'expired';
-} elseif ($transaction_status == 'cancel' || $transaction_status == 'deny') {
-    $status = 'failed';
+// 5. Update Database
+// Pastikan variabel koneksi ($conn atau $koneksi) sesuai dengan file koneksi.php kamu
+if (!empty($order_id)) {
+    $query = "UPDATE donasi SET status = '$status_db' WHERE order_id = '$order_id'";
+    
+    // Gunakan variabel koneksi yang benar (sesuaikan $conn atau $koneksi)
+    if (mysqli_query($conn, $query)) {
+        http_response_code(200);
+        echo "Berhasil update status ke: $status_db";
+    } else {
+        http_response_code(500);
+        echo "Gagal update database: " . mysqli_error($conn);
+    }
 }
-
-// Update DB
-if ($order_id != '') {
-    mysqli_query(
-        $conn,
-        "UPDATE donasi SET status='$status' WHERE order_id='$order_id'"
-    );
-}
-
-http_response_code(200);
+?>
