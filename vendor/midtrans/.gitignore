@@ -4,4 +4,4 @@ vendor/
 .idea
 .DS_STORE
 config/Midtrans.php
-
+.env
