@@ -8,7 +8,10 @@ $jumlah = $_POST['jumlah'] ?? 0;
 
 $order_id = "DONASI-" . time();
 
-// Update: Menggunakan 'jumlah' dan 'created_at' sesuai database kamu
+// 1. Definisikan URL Root proyek kamu
+$root_url = "http://localhost/UAS_Projek_KElompok1/";
+
+// 2. Simpan ke Database dengan status 'pending'
 $query_db = "INSERT INTO donasi (nama, email, jumlah, order_id, status, created_at) 
              VALUES ('$nama', '$email', '$jumlah', '$order_id', 'pending', NOW())";
 
@@ -16,9 +19,25 @@ if (!mysqli_query($conn, $query_db)) {
     die("Error Database: " . mysqli_error($conn));
 }
 
+// 3. Konfigurasi Callback agar tidak ke Example Domain
+$callbacks = [
+    'finish'   => $root_url . "form_donasi.php?status=success",
+    'unfinish' => $root_url . "form_donasi.php?status=pending",
+    'error'    => $root_url . "form_donasi.php?status=error"
+];
+
+// 4. Siapkan Parameter Snap Midtrans
 $params = [
-    'transaction_details' => ['order_id' => $order_id, 'gross_amount' => $jumlah],
-    'customer_details' => ['first_name' => $nama, 'email' => $email],
+    'transaction_details' => [
+        'order_id' => $order_id, 
+        'gross_amount' => $jumlah
+    ],
+    'customer_details' => [
+        'first_name' => $nama, 
+        'email' => $email
+    ],
+    'callbacks' => $callbacks, // <--- Redirect otomatis diatur di sini
+    'enabled_payments' => ['gopay', 'shopeepay', 'dana', 'other_qris'] // Menampilkan opsi E-Wallet
 ];
 
 $snapToken = \Midtrans\Snap::getSnapToken($params);
@@ -65,7 +84,7 @@ $snapToken = \Midtrans\Snap::getSnapToken($params);
                     <div class="h-px bg-gray-100 w-full"></div>
 
                     <div class="text-center py-2">
-                        <span class="block text-gray-400 text-xs uppercase tracking-widest mb-1 text-center">Total yang
+                        <span class="block text-gray-400 text-xs uppercase tracking-widest mb-1">Total yang
                             dibayarkan</span>
                         <span
                             class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">
@@ -102,7 +121,7 @@ $snapToken = \Midtrans\Snap::getSnapToken($params);
     document.getElementById('pay-button').onclick = function() {
         snap.pay('<?= $snapToken ?>', {
             onSuccess: function(result) {
-                // Mengarahkan ke sukses.php dengan membawa order_id untuk update database otomatis
+                // Redirect manual jika callback browser aktif
                 window.location.href = "sukses.php?order_id=" + result.order_id;
             },
             onPending: function(result) {
