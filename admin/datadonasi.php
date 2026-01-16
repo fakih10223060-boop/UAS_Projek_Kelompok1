@@ -10,6 +10,7 @@ $query = mysqli_query($conn, "SELECT * FROM donasi ORDER BY id DESC");
     <meta charset="UTF-8">
     <title>Data Donasi</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-100 min-h-screen p-6">
@@ -30,6 +31,7 @@ $query = mysqli_query($conn, "SELECT * FROM donasi ORDER BY id DESC");
                         <th class="px-4 py-3 text-left">Nominal</th>
                         <th class="px-4 py-3 text-left">Status</th>
                         <th class="px-4 py-3 text-left">Tanggal</th>
+                        <th class="px-4 py-3 text-center">Aksi</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200">
@@ -58,6 +60,13 @@ $query = mysqli_query($conn, "SELECT * FROM donasi ORDER BY id DESC");
                         </td>
                         <td class="px-4 py-3 text-gray-600">
                             <?= date('d-m-Y H:i', strtotime($row['created_at'])) ?>
+                        </td>
+                        <td class="px-4 py-3 text-center">
+                            <a href="hapus_donasi.php?id=<?= $row['id']; ?>"
+                                onclick="return confirm('Apakah Anda yakin ingin menghapus data donasi dari <?= $row['nama']; ?>?')"
+                                class="inline-flex items-center bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded text-xs transition duration-200">
+                                <i class="fa-solid fa-trash mr-1"></i> Hapus
+                            </a>
                         </td>
                     </tr>
                     <?php endwhile; ?>
