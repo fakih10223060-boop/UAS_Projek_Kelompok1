@@ -64,46 +64,54 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
             </div>
         </div>
     </section>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <section class="max-w-6xl mx-auto -mt-16 relative z-10 px-4">
-        <div class="bg-white rounded-xl shadow-xl p-6">
-            <h2 class="text-center text-gray-800 font-bold mb-6">Akses Cepat</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <a href="#"
-                    class="flex flex-col items-center justify-center p-4 rounded-lg hover:bg-blue-50 transition border border-transparent hover:border-blue-100">
+    <section class="max-w-6xl mx-auto px-4 relative z-30 -mt-10 mb-16">
+        <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-10">
+
+            <h3 class="text-2xl font-bold text-center text-gray-800 mb-8">Akses Cepat</h3>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+                <a href="donasi.php"
+                    class="group flex flex-col items-center gap-4 p-4 rounded-xl hover:bg-green-50 transition duration-300 cursor-pointer">
                     <div
-                        class="flex items-center justify-center bg-blue-100 text-blue-600 rounded-full w-14 h-14 text-2xl mb-2">
-                        <ion-icon name="cash-outline"></ion-icon>
+                        class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-3xl shadow-sm group-hover:bg-green-600 group-hover:text-white group-hover:scale-110 transition duration-300">
+                        <i class="ph ph-hand-heart"></i>
                     </div>
-                    <span class="text-sm font-medium">Donasi Sekarang</span>
+                    <span class="font-semibold text-gray-700 group-hover:text-green-700 transition">Donasi
+                        Sekarang</span>
                 </a>
 
-                <a href="#"
-                    class="flex flex-col items-center p-4 rounded-lg hover:bg-blue-50 transition border border-transparent hover:border-blue-100">
+                <a href="kalkulator.php"
+                    class="group flex flex-col items-center gap-4 p-4 rounded-xl hover:bg-green-50 transition duration-300 cursor-pointer">
                     <div
-                        class="flex items-center justify-center bg-blue-100 text-blue-600 rounded-full w-14 h-14 text-2xl mb-2">
-                        <ion-icon name="calculator-outline"></ion-icon>
+                        class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-3xl shadow-sm group-hover:bg-green-600 group-hover:text-white group-hover:scale-110 transition duration-300">
+                        <i class="ph ph-calculator"></i>
                     </div>
-                    <span class="text-sm font-medium text-center">Kalkulator Zakat</span>
+                    <span class="font-semibold text-gray-700 group-hover:text-green-700 transition">Kalkulator
+                        Zakat</span>
                 </a>
 
-                <a href="#"
-                    class="flex flex-col items-center p-4 rounded-lg hover:bg-blue-50 transition border border-transparent hover:border-blue-100">
+                <a href="form_donasi.php"
+                    class="group flex flex-col items-center gap-4 p-4 rounded-xl hover:bg-green-50 transition duration-300 cursor-pointer">
                     <div
-                        class="flex items-center justify-center bg-blue-100 text-blue-600 rounded-full w-14 h-14 text-2xl mb-2">
-                        <ion-icon name="card-outline"></ion-icon>
+                        class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-3xl shadow-sm group-hover:bg-green-600 group-hover:text-white group-hover:scale-110 transition duration-300">
+                        <i class="ph ph-bank"></i>
                     </div>
-                    <span class="text-sm font-medium">Rekening Donasi</span>
+                    <span class="font-semibold text-gray-700 group-hover:text-green-700 transition">Rekening
+                        Donasi</span>
                 </a>
 
-                <a href="#"
-                    class="flex flex-col items-center p-4 rounded-lg hover:bg-blue-50 transition border border-transparent hover:border-blue-100">
+                <a href="jemput.php"
+                    class="group flex flex-col items-center gap-4 p-4 rounded-xl hover:bg-green-50 transition duration-300 cursor-pointer">
                     <div
-                        class="flex items-center justify-center bg-blue-100 text-blue-600 rounded-full w-14 h-14 text-2xl mb-2">
-                        <ion-icon name="car-outline"></ion-icon>
+                        class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-3xl shadow-sm group-hover:bg-green-600 group-hover:text-white group-hover:scale-110 transition duration-300">
+                        <i class="ph ph-truck"></i>
                     </div>
-                    <span class="text-sm font-medium">Jemput Donasi</span>
+                    <span class="font-semibold text-gray-700 group-hover:text-green-700 transition">Jemput Donasi</span>
                 </a>
+
             </div>
         </div>
     </section>
