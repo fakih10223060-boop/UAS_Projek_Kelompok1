@@ -8,11 +8,9 @@ $id = $_GET['id'];
 $query = mysqli_query($conn, "DELETE FROM donasi WHERE id = '$id'");
 
 if ($query) {
-    // 3. Munculkan pesan sukses DAN arahkan kembali ke tabel data donasi
-    echo "<script>
-            alert('Data berhasil dihapus!');
-            window.location.href = 'dashboard.php?page=datadonasi';
-          </script>";
+    // 3. LANGSUNG arahkan kembali ke tabel data donasi tanpa alert/pop-up
+    header("Location: dashboard.php?page=datadonasi");
+    exit(); 
 } else {
     // Tampilkan pesan jika gagal
     echo "Gagal menghapus data: " . mysqli_error($conn);

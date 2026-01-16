@@ -1,7 +1,7 @@
 <?php
 include '../config/koneksi.php';
 
-// Cek session jika file ini diakses langsung, tapi idealnya dipanggil via dashboard.php
+// Cek session agar keamanan tetap terjaga
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -35,15 +35,18 @@ if (!isset($_SESSION['admin'])) {
                 ?>
                 <tr class="hover:bg-gray-50 transition">
                     <td class="px-4 py-3 text-center"><?= $no++ ?></td>
-                    <td class="px-4 py-3 font-medium text-gray-800"><?= $data['judul'] ?></td>
-                    <td class="px-4 py-3 text-gray-600"><?= $data['caption'] ?></td>
+                    <td class="px-4 py-3 font-medium text-gray-800">
+                        <?= $data['judul'] ?>
+                    </td>
+                    <td class="px-4 py-3 text-gray-600">
+                        <?= $data['caption'] ?>
+                    </td>
                     <td class="px-4 py-3 text-center">
                         <img class="w-24 h-16 object-cover rounded-md mx-auto"
                             src="../upload/berita/<?= $data['foto'] ?>">
                     </td>
                     <td class="px-4 py-3 text-center">
                         <a href="hapus_berita.php?id=<?= $data['id'] ?>"
-                            onclick="return confirm('Yakin ingin menghapus berita ini?')"
                             class="inline-block bg-red-500 hover:bg-red-600 text-white text-sm px-3 py-1 rounded-md transition">
                             Hapus
                         </a>
