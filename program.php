@@ -47,7 +47,7 @@ if (isset($conn)) {
  </nav>
 
  <section class="relative">
-     <img src="asset/galeri/bander.jpeg" alt="Donasi Pendidikan" class="w-full h-[420px] object-cover" />
+     <img src="asset/galeri/program3.jpeg" alt="Donasi Pendidikan" class="w-full h-[420px] object-cover" />
  </section>
 
  <section class="max-w-5xl mx-auto px-6 py-12">
@@ -92,23 +92,23 @@ if (isset($conn)) {
      <h2 class="text-2xl font-bold mt-16 mb-8 text-center text-blue-900">Galeri Kegiatan</h2>
      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
          <?php
-            if (isset($query_galeri)) {
-                if (mysqli_num_rows($query_galeri) > 0) {
-                    while ($g = mysqli_fetch_assoc($query_galeri)) {
-            ?>
+if (isset($query_galeri)) {
+    if (mysqli_num_rows($query_galeri) > 0) {
+        while ($g = mysqli_fetch_assoc($query_galeri)) {
+?>
          <div class="overflow-hidden rounded-xl shadow-lg">
              <img src="asset/galeri/<?= $g['foto']; ?>"
                  class="object-cover w-full h-52 hover:scale-110 transition duration-500" alt="Galeri Kegiatan">
          </div>
-         <?php 
-                    }
-                } else {
-                    echo "<p class='text-center col-span-full text-gray-500 italic'>Belum ada foto galeri aktif.</p>";
-                }
-            } else {
-                echo "<p class='text-center text-red-500 col-span-full'>Koneksi database tidak terdeteksi.</p>";
-            }
-            ?>
+         <?php
+        }
+    } else {
+        echo "<p class='text-center col-span-full text-gray-500 italic'>Belum ada foto galeri aktif.</p>";
+    }
+} else {
+    echo "<p class='text-center text-red-500 col-span-full'>Koneksi database tidak terdeteksi.</p>";
+}
+?>
      </div>
  </section>
 
