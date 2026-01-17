@@ -1,28 +1,23 @@
 <?php
 include '../config/koneksi.php';
 
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-if (!isset($_SESSION['admin'])) {
-    header("Location: login.php");
-    exit;
-}
-
 if (isset($_POST['simpan'])) {
+    $judul   = mysqli_real_escape_string($conn, $_POST['judul']);
+    $caption = mysqli_real_escape_string($conn, $_POST['caption']);
+    
+    // Proses Upload Foto
+    $foto      = $_FILES['foto']['name'];
+    $tmp_name  = $_FILES['foto']['tmp_name'];
+    $folder    = "../upload/berita/";
 
-    $judul   = $_POST['judul'];
-    $caption = $_POST['caption'];
+    if (move_uploaded_file($tmp_name, $folder . $foto)) {
+        $query = mysqli_query($conn, "INSERT INTO berita (judul, caption, foto) VALUES ('$judul', '$caption', '$foto')");
 
-    $foto = $_FILES['foto']['name'];
-    $tmp  = $_FILES['foto']['tmp_name'];
-
-    move_uploaded_file($tmp, "../upload/berita/" . $foto);
-
-    mysqli_query($conn, "INSERT INTO berita (judul, caption, foto)
-                         VALUES ('$judul', '$caption', '$foto')");
-
-    header("Location: berita.php");
+        // Langsung redirect tanpa alert agar tidak ada layar putih
+        header("location: dashboard.php?page=berita");
+        exit;
+    } else {
+        echo "Gagal mengunggah foto.";
+    }
 }
 ?>
