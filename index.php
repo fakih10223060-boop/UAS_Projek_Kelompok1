@@ -73,7 +73,7 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
 
-                <a href="donasi.php"
+                <a href="form-donasi.php"
                     class="group flex flex-col items-center gap-4 p-4 rounded-xl hover:bg-green-50 transition duration-300 cursor-pointer">
                     <div
                         class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-3xl shadow-sm group-hover:bg-green-600 group-hover:text-white group-hover:scale-110 transition duration-300">
@@ -188,7 +188,7 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 <img src="asset/galeri/program1.jpeg" alt="Beasiswa Anak Yatim" class="w-full h-44 object-cover" />
                 <div class="p-4 text-center">
                     <h3 class="font-semibold mb-4">Beasiswa Pendidikan Anak Yatim</h3>
-                    <a href="#"
+                    <a href="programlihatdetail.php"
                         class="inline-block border border-gray-300 px-6 py-2 rounded-md text-sm hover:bg-blue-600 hover:text-white hover:border-blue-600 transition">
                         Lihat Detail
                     </a>
