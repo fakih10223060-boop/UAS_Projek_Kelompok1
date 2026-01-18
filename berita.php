@@ -3,7 +3,7 @@
 $host = 'localhost';
 $user = 'root';
 $pass = '';
-$db = 'panti_admin(2)';  // Nama database sesuai gambar phpMyAdmin
+$db = 'panti_admin';  // Nama database sesuai gambar phpMyAdmin
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 

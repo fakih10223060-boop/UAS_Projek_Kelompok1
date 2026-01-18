@@ -65,9 +65,7 @@ $page = $_GET['page'] ?? 'home';
                 </div>
             </div>
 
-            <nav class="flex-1 px-4 py-8 space-y-2 text-sm font-medium">
-
-                <?php
+            <?php
                 function active($p, $page) {
                     // Menu aktif menggunakan efek kaca (Glassmorphism)
                     return $p === $page
@@ -76,26 +74,30 @@ $page = $_GET['page'] ?? 'home';
                 }
                 ?>
 
-                <a href="dashboard.php?page=home"
-                    class="flex items-center gap-4 px-5 py-4 rounded-xl transition-all <?= active('home', $page) ?>">
-                    <span class="text-xl">🏠</span> Dashboard
-                </a>
+            <a href="dashboard.php?page=home"
+                class="flex items-center gap-4 px-5 py-4 rounded-xl transition-all <?= active('home', $page) ?>">
+                <span class="text-xl">🏠</span> Dashboard
+            </a>
 
-                <a href="dashboard.php?page=berita"
-                    class="flex items-center gap-4 px-5 py-4 rounded-xl transition-all <?= active('berita', $page) ?>">
-                    <span class="text-xl">📰</span> Berita
-                </a>
+            <a href="dashboard.php?page=berita"
+                class="flex items-center gap-4 px-5 py-4 rounded-xl transition-all <?= active('berita', $page) ?>">
+                <span class="text-xl">📰</span> Berita
+            </a>
 
-                <a href="dashboard.php?page=galeri"
-                    class="flex items-center gap-4 px-5 py-4 rounded-xl transition-all <?= active('galeri', $page) ?>">
-                    <span class="text-xl">🖼️</span> Galeri
-                </a>
+            <a href="dashboard.php?page=galeri"
+                class="flex items-center gap-4 px-5 py-4 rounded-xl transition-all <?= active('galeri', $page) ?>">
+                <span class="text-xl">🖼️</span> Galeri
+            </a>
 
-                <a href="dashboard.php?page=datadonasi"
-                    class="flex items-center gap-4 px-5 py-4 rounded-xl transition-all <?= active('datadonasi', $page) ?>">
-                    <span class="text-xl">✉️</span> Data Donasi
-                </a>
-            </nav>
+            <a href="dashboard.php?page=datadonasi"
+                class="flex items-center gap-4 px-5 py-4 rounded-xl transition-all <?= active('datadonasi', $page) ?>">
+                <span class="text-xl">✉️</span> Data Donasi
+            </a>
+            <a href="dashboard.php?page=program_unggulan"
+                class="flex items-center gap-4 px-5 py-4 rounded-xl transition-all <?= active('program_unggulan', $page) ?>">
+                <span class="text-xl">✉️</span> Program Unggulan
+            </a>
+            </ nav>
 
             <div class="px-6 py-8 border-t border-white/20 bg-black/5">
                 <p class="text-[10px] uppercase tracking-widest text-white/70 font-bold mb-3">Administrator Active</p>
@@ -149,6 +151,10 @@ $page = $_GET['page'] ?? 'home';
                         case 'tambah_galeri': include "tambah_galeri.php"; break;
                         case 'hapus_galeri': include "hapus_galeri.php"; break;
                         case 'datadonasi': include "datadonasi.php"; break;
+                        case 'program_unggulan': include "program.php"; break;
+                        case 'tambah_program': include "tambah_program.php"; break;
+                        case 'hapus_program': include "hapus_program.php"; break;
+                        case 'edit_program': include "edit_program.php"; break;
                         default: include "home.php"; break;
                     }
                     ?>

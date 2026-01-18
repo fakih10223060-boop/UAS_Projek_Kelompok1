@@ -4,6 +4,7 @@ include 'config/koneksi.php';
 // Ambil data galeri di awal agar rapi
 if (isset($conn)) {
     $query_galeri = mysqli_query($conn, "SELECT * FROM galeri WHERE status='aktif'");
+    $data = mysqli_query($conn, "SELECT * FROM program WHERE status='aktif'");
 }
 ?>
  <!DOCTYPE html>
@@ -53,41 +54,48 @@ if (isset($conn)) {
  <section class="max-w-5xl mx-auto px-6 py-12">
      <h2 class="text-3xl font-bold mb-8 text-center text-blue-900">Detail Program Kami</h2>
 
-     <div class="space-y-10 text-gray-700 leading-relaxed text-justify">
-         <div>
-             <h3 class="font-bold text-xl mb-3 text-blue-800">Masa Depan Cerah untuk Generasi Penerus</h3>
-             <p>
-                 Pendidikan adalah kunci untuk membuka pintu masa depan yang lebih baik. Bagi anak-anak yatim dan
-                 dhuafa, akses terhadap pendidikan seringkali terhambat oleh keterbatasan finansial. Program
-                 Beasiswa
-                 Yatim dan Dhuafa hadir untuk memastikan bahwa setiap anak memiliki kesempatan yang sama untuk
-                 meraih
-                 impian dan potensi terbaik mereka.
-             </p>
-         </div>
+     <section class="max-w-7xl mx-auto px-4 py-12">
+         <h1 class="text-3xl font-bold text-gray-800 mb-10 text-center">
+             Program Unggulan
+         </h1>
 
-         <div>
-             <h3 class="font-bold text-xl mb-3 text-blue-800">Dampak Donasi Anda</h3>
-             <p>
-                 Setiap rupiah donasi Anda akan langsung disalurkan untuk kebutuhan pendidikan mereka. Ini
-                 mencakup
-                 biaya SPP, buku pelajaran, seragam, transportasi, hingga bimbingan belajar tambahan. Dengan
-                 pendidikan yang layak, anak-anak ini tidak hanya akan meningkatkan kualitas hidup mereka
-                 sendiri,
-                 tetapi juga menjadi agen perubahan positif di masyarakat.
-             </p>
-         </div>
+         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+             <?php while ($p = mysqli_fetch_assoc($data)) { ?>
+             <div class="bg-white rounded-2xl shadow-md overflow-hidden
+                    hover:shadow-xl transition duration-300 group">
 
-         <div>
-             <h3 class="font-bold text-xl mb-3 text-blue-800">Bagaimana Program Ini Berjalan?</h3>
-             <p>
-                 Kami bekerja sama dengan sekolah-sekolah dan komunitas lokal untuk mengidentifikasi anak-anak
-                 yang
-                 paling membutuhkan. Program dijalankan dengan sistem pendampingan dan pelaporan berkala sebagai
-                 bentuk transparansi dan akuntabilitas kepada para donatur.
-             </p>
+                 <!-- Gambar -->
+                 <div class="relative overflow-hidden">
+                     <img src="asset/galeri/<?= $p['gambar'] ?>" class="h-52 w-full object-cover
+                            group-hover:scale-105 transition duration-500">
+
+                     <div class="absolute inset-0 bg-black/0
+                            group-hover:bg-black/20 transition"></div>
+                 </div>
+
+                 <!-- Konten -->
+                 <div class="p-6 space-y-4">
+                     <h2 class="text-lg font-semibold text-gray-800 line-clamp-2">
+                         <?= $p['judul'] ?>
+                     </h2>
+
+                     <p class="text-sm text-gray-600 leading-relaxed line-clamp-3">
+                         <?= substr($p['deskripsi'], 0, 100) ?>...
+                     </p>
+
+                     <a href="detail_program.php?id=<?= $p['id'] ?>" class="block text-center mt-4 py-2.5 rounded-xl
+                          bg-gradient-to-r from-green-600 to-green-500
+                          text-white font-semibold
+                          hover:from-green-700 hover:to-green-600
+                          transition shadow-md">
+                         Lihat Detail
+                     </a>
+                 </div>
+             </div>
+             <?php } ?>
          </div>
-     </div>
+     </section>
+
 
      <h2 class="text-2xl font-bold mt-16 mb-8 text-center text-blue-900">Galeri Kegiatan</h2>
      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
