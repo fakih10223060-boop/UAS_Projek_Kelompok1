@@ -3,7 +3,7 @@ include 'config/koneksi.php';
 
 $query = mysqli_query($conn, 'SELECT * FROM berita ORDER BY id DESC');
 $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
-$data = mysqli_query($conn, "SELECT * FROM program ORDER BY id DESC");
+$data = mysqli_query($conn, 'SELECT * FROM program ORDER BY id DESC');
 ?>
 
 <!DOCTYPE html>
@@ -274,7 +274,8 @@ $data = mysqli_query($conn, "SELECT * FROM program ORDER BY id DESC");
                         <li>Jl. Ophir II No. 6A, Kebayoran Baru, Jakarta Selatan</li>
                         <li>Email: <a href="mailto:info@aksinyata.org"
                                 class="text-blue-600 hover:underline">info@aksinyata.org</a></li>
-                        <a href="083839421020" class="text-gray-600 hover:text-blue-600">083839421020</a>
+                        <a href="https://api.whatsapp.com/send?phone=+6283839421020&text=assalamu'alikum"
+                            class="text-gray-600 hover:text-blue-600">Telpon: 083839421020</a>
                     </ul>
                 </div>
 

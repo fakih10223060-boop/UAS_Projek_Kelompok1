@@ -146,7 +146,8 @@ if (!$result) {
                         <li>Jl. Ophir II No. 6A, Kebayoran Baru, Jakarta Selatan</li>
                         <li>Email: <a href="mailto:info@aksinyata.org"
                                 class="text-blue-600 hover:underline">info@aksinyata.org</a></li>
-                        <li>Telp: 0877-1199-9023</li>
+                        <a href="https://api.whatsapp.com/send?phone=+6283839421020&text=assalamu'alikum"
+                            class="text-gray-600 hover:text-blue-600">telpon: 083839421020</a>
                     </ul>
                 </div>
 
