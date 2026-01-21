@@ -88,7 +88,7 @@ if (!$result) {
             </div>
 
             <img src="asset/galeri/program5.jpeg" alt="Bantuan Pendidikan"
-                class="w-full h-auto rounded-xl mb-8 shadow-md">
+                class="rounded-[2rem] shadow-2xl rotate-2 hover:rotate-0 transition duration-500">
 
             <div class="prose max-w-none text-gray-700 leading-relaxed text-lg">
                 <p class="mb-4">
@@ -146,7 +146,8 @@ if (!$result) {
                         <li>Jl. Ophir II No. 6A, Kebayoran Baru, Jakarta Selatan</li>
                         <li>Email: <a href="mailto:info@aksinyata.org"
                                 class="text-blue-600 hover:underline">info@aksinyata.org</a></li>
-                        <li>Telp: 0877-1199-9023</li>
+                        <a href="https://api.whatsapp.com/send?phone=+6283839421020&text=assalamu'alikum"
+                            class="text-gray-600 hover:text-blue-600">telpon: 083839421020</a>
                     </ul>
                 </div>
 
