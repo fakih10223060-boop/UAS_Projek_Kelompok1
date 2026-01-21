@@ -1,14 +1,36 @@
 <?php
+// keamanan dasar (opsional tapi disarankan)
+// session_start();
+// if (!isset($_SESSION['admin'])) {
+//   header("Location: login.php");
+//   exit;
+// }
+
 include '../config/koneksi.php';
+
+// cek parameter id
+if (!isset($_GET['id'])) {
+  header("Location: program.php");
+  exit;
+}
 
 $id = $_GET['id'];
 
-$data = mysqli_query($conn, "SELECT foto FROM berita WHERE id='$id'");
-$row = mysqli_fetch_assoc($data);
+// ambil data program (untuk hapus gambar)
+$data = mysqli_query($conn, "SELECT gambar FROM program WHERE id='$id'");
+$p = mysqli_fetch_assoc($data);
 
-unlink("../upload/berita/" . $row['foto']);
+// hapus gambar jika ada
+if ($p && !empty($p['gambar'])) {
+  $file = "../asset/galeri/" . $p['gambar'];
+  if (file_exists($file)) {
+    unlink($file);
+  }
+}
 
-mysqli_query($conn, "DELETE FROM berita WHERE id='$id'");
+// hapus data program
+mysqli_query($conn, "DELETE FROM program WHERE id='$id'");
 
-header("Location: berita.php");
-?>
+// kembali ke halaman program
+header("Location: dashboard.php?page=program");
+exit;

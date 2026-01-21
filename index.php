@@ -3,6 +3,7 @@ include 'config/koneksi.php';
 
 $query = mysqli_query($conn, 'SELECT * FROM berita ORDER BY id DESC');
 $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
+$data = mysqli_query($conn, "SELECT * FROM program ORDER BY id DESC");
 ?>
 
 <!DOCTYPE html>
@@ -177,96 +178,51 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-4 py-10 bg-white">
-        <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">
-            Program Unggulan Kami
-        </h2>
+    <section class="max-w-7xl mx-auto px-4 py-12">
+        <h1 class="text-3xl font-bold text-gray-800 mb-10 text-center">
+            Program Unggulan
+        </h1>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Card 1 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="asset/galeri/program1.jpeg" alt="Beasiswa Anak Yatim" class="w-full h-44 object-cover" />
-                <div class="p-4 text-center">
-                    <h3 class="font-semibold mb-4">Beasiswa Pendidikan Anak Yatim</h3>
-                    <a href="programlihatdetail.php"
-                        class="inline-block border border-gray-300 px-6 py-2 rounded-md text-sm hover:bg-blue-600 hover:text-white hover:border-blue-600 transition">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <?php while ($p = mysqli_fetch_assoc($data)) { ?>
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden
+                    hover:shadow-xl transition duration-300 group">
+
+                <!-- Gambar -->
+                <div class="relative overflow-hidden">
+                    <img src="asset/galeri/<?= $p['gambar'] ?>" class="h-52 w-full object-cover
+                            group-hover:scale-105 transition duration-500">
+
+                    <div class="absolute inset-0 bg-black/0
+                            group-hover:bg-black/20 transition"></div>
+                </div>
+
+                <!-- Konten -->
+                <div class="p-6 space-y-4">
+                    <h2 class="text-lg font-semibold text-gray-800 line-clamp-2">
+                        <?= $p['judul'] ?>
+                    </h2>
+
+                    <p class="text-sm text-gray-600 leading-relaxed line-clamp-3">
+                        <?= substr($p['deskripsi'], 0, 100) ?>...
+                    </p>
+
+                    <a href="detail_program.php?id=<?= $p['id'] ?>" class="block text-center mt-4 py-2.5 rounded-xl
+                          bg-gradient-to-r from-green-600 to-green-500
+                          text-white font-semibold
+                          hover:from-green-700 hover:to-green-600
+                          transition shadow-md">
                         Lihat Detail
                     </a>
                 </div>
             </div>
-
-            <!-- Card 2 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="asset/galeri/program2.jpeg" alt="Bantuan Pangan" class="w-full h-44 object-cover" />
-                <div class="p-4 text-center">
-                    <h3 class="font-semibold mb-4">Bantuan Pangan Korban Bencana</h3>
-                    <a href="bantuan.php"
-                        class="inline-block border border-gray-300 px-6 py-2 rounded-md text-sm hover:bg-blue-600 hover:text-white hover:border-blue-600 transition">
-                        Lihat Detail
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="asset/galeri/program3.jpeg" alt="Pelatihan Pemuda" class="w-full h-44 object-cover" />
-                <div class="p-4 text-center">
-                    <h3 class="font-semibold mb-4">
-                        Pelatihan Keterampilan Pemuda Dhuafa
-                    </h3>
-                    <a href="#"
-                        class="inline-block border border-gray-300 px-6 py-2 rounded-md text-sm hover:bg-blue-600 hover:text-white hover:border-blue-600 transition">
-                        Lihat Detail
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="asset/galeri/program4.jpeg" alt="Panti Asuhan" class="w-full h-44 object-cover" />
-                <div class="p-4 text-center">
-                    <h3 class="font-semibold mb-4">Pembangunan Panti Asuhan Modern</h3>
-                    <a href="#"
-                        class="inline-block border border-gray-300 px-6 py-2 rounded-md text-sm hover:bg-blue-600 hover:text-white hover:border-blue-600 transition">
-                        Lihat Detail
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="asset/galeri/program5.jpeg" alt="Peduli Yatim" class="w-full h-44 object-cover" />
-                <div class="p-4 text-center">
-                    <h3 class="font-semibold mb-4">Peduli Yatim Dhuafa</h3>
-                    <a href="peduli.php"
-                        class="inline-block border border-gray-300 px-6 py-2 rounded-md text-sm hover:bg-blue-600 hover:text-white hover:border-blue-600 transition">
-                        Lihat Detail
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="asset/galeri/program6.jpeg" alt="Anak Terlantar" class="w-full h-44 object-cover" />
-                <div class="p-4 text-center">
-                    <h3 class="font-semibold mb-4">Peduli Anak Terlantar</h3>
-                    <a href="#"
-                        class="inline-block border border-gray-300 px-6 py-2 rounded-md text-sm hover:bg-blue-600 hover:text-white hover:border-blue-600 transition">
-                        Lihat Detail
-                    </a>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </section>
-
     <!-- Berita Terbaru -->
     <section class="py-16 bg-gray-100">
         <div class="container mx-auto px-6 lg:px-4">
-            <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">
-                Berita Terbaru
-            </h2>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid gridols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
                 <?php if (!empty($data_berita)): ?>
                 <?php foreach ($data_berita as $berita): ?>
@@ -305,7 +261,9 @@ $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
                 <div>
                     <h3 class="font-bold mb-4 text-blue-900">Tentang Kami</h3>
                     <p class="text-sm leading-relaxed">
-                        LAZNAS & Panti Yatim berkomitmen untuk menyalurkan amanah donasi Anda dengan transparan dan
+                        LAZNAS & Panti Yatim berkomitmen untuk menyalurkan amanah donasi Anda dengan
+                        transparan
+                        dan
                         efektif demi masa depan anak-anak yang lebih baik.
                     </p>
                 </div>
