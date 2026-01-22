@@ -3,7 +3,7 @@ include 'config/koneksi.php';
 
 $query = mysqli_query($conn, 'SELECT * FROM berita ORDER BY id DESC');
 $data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
-$data = mysqli_query($conn, "SELECT * FROM program ORDER BY id DESC");
+$data = mysqli_query($conn, 'SELECT * FROM program ORDER BY id DESC');
 ?>
 
 <!DOCTYPE html>
@@ -278,7 +278,8 @@ $data = mysqli_query($conn, "SELECT * FROM program ORDER BY id DESC");
                         <li>Jl. Ophir II No. 6A, Kebayoran Baru, Jakarta Selatan</li>
                         <li>Email: <a href="mailto:info@aksinyata.org"
                                 class="text-blue-600 hover:underline">info@aksinyata.org</a></li>
-                        <li>Telp: 0877-1199-9023</li>
+                        <a href="https://api.whatsapp.com/send?phone=+6283839421020&text=assalamu'alikum"
+                            class="text-gray-600 hover:text-blue-600">Telpon: 083839421020</a>
                     </ul>
                 </div>
 
@@ -295,7 +296,8 @@ $data = mysqli_query($conn, "SELECT * FROM program ORDER BY id DESC");
                 <div>
                     <h3 class="font-bold mb-4 text-blue-900">Sosial Media</h3>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-600 hover:text-blue-600">Instagram</a>
+                        <a href="https://www.instagram.com/aksinyata_foundation?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            class="text-gray-600 hover:text-blue-600">Instagram</a>
                         <a href="#" class="text-gray-600 hover:text-blue-600">Facebook</a>
                         <a href="#" class="text-gray-600 hover:text-blue-600">YouTube</a>
                     </div>

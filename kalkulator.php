@@ -1,7 +1,7 @@
 <?php
-$hargaEmas  = 1200000; // Harga per gram
-$hargaPerak = 14000;   // Harga per gram
-$nishabEmas = 85;      // Gram
+$hargaEmas = 1200000;  // Harga per gram
+$hargaPerak = 14000;  // Harga per gram
+$nishabEmas = 85;  // Gram
 $totalNishab = $hargaEmas * $nishabEmas;
 ?>
 <!DOCTYPE html>
@@ -220,7 +220,6 @@ $totalNishab = $hargaEmas * $nishabEmas;
             </p>
         </div>
     </footer>
-
     <script>
     const HARGA_EMAS = <?php echo $hargaEmas; ?>;
     const NISHAB_MAAL = <?php echo $totalNishab; ?>;

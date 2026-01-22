@@ -10,6 +10,31 @@
 </head>
 
 <body class="bg-slate-100 font-sans tracking-tight">
+    <nav class="bg-white shadow sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2">
+                    <img src="asset/logo/logo1.jpeg" alt="#" class="h-8" />
+                    <span class="font-bold text-gray-800 uppercase">Aksi Nyata</span>
+                </div>
+
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.php" class="text-gray-600 hover:text-blue-600 transition">Beranda</a>
+                    <a href="program.php" class="text-gray-600 hover:text-blue-600 transition">Program Unggulan</a>
+                    <a href="berita.php" class="text-gray-600 hover:text-blue-600 transition">Berita Terbaru</a>
+                    <a href="kalkulator.php" class="text-gray-600 hover:text-blue-600 transition">Kalkulator Zakat</a>
+                    <a href="tentang.php" class="text-gray-600 hover:text-blue-600 transition">Tentang Kami</a>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <a href="form_donasi.php"
+                        class="bg-green-500 hover:bg-green-600 text-white text-xs md:text-sm font-semibold px-5 py-2.5 rounded-md transition">
+                        DONASI SEKARANG
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <div class="min-h-screen flex items-center justify-center p-6">
         <div class="w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden transform transition-all">
