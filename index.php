@@ -221,6 +221,10 @@ $data = mysqli_query($conn, "SELECT * FROM program ORDER BY id DESC");
     </section>
     <!-- Berita Terbaru -->
     <section class="py-16 bg-gray-100">
+        <h1 class="text-3xl font-bold text-gray-800 mb-10 text-center">
+            Bantuan Tersalurkan
+        </h1>
+
         <div class="container mx-auto px-6 lg:px-4">
             <div class="grid gridols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 

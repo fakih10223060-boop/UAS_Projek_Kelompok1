@@ -171,68 +171,53 @@ $totalNishab = $hargaEmas * $nishabEmas;
         </div>
     </main>
 
-    <footer class="bg-blue-50 text-gray-700">
+    <footer class="bg-blue-50 text-gray-700 border-t border-blue-100">
         <div class="max-w-7xl mx-auto px-6 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
                 <div>
+                    <h3 class="font-bold mb-4 text-blue-900">Tentang Kami</h3>
                     <p class="text-sm leading-relaxed">
-                        LAZNAS & Panti Yatim berkomitmen untuk menyalurkan amanah donasi Anda dengan transparan dan
-                        efektif.
+                        LAZNAS & Panti Yatim berkomitmen untuk menyalurkan amanah donasi Anda dengan
+                        transparan
+                        dan
+                        efektif demi masa depan anak-anak yang lebih baik.
                     </p>
                 </div>
 
                 <div>
-                    <h3 class="font-semibold mb-4">Kontak</h3>
+                    <h3 class="font-bold mb-4 text-blue-900">Kontak</h3>
                     <ul class="space-y-2 text-sm">
-                        <li>Jl. Ophir II No. 6A RT 007/RW 001, Kelurahan Gunung, Kecamatan Kebayoran Baru, Jakarta
-                            Selatan</li>
-                        <li>
-                            <a href="mailto:info@aksinyata.org" class="hover:text-blue-600">
-                                info@aksinyata.org
-                            </a>
-                        </li>
-                        <li>
-                            <a href="tel:087711999023" class="hover:text-blue-600">
-                                0877-1199-9023
-                            </a>
-                        </li>
+                        <li>Jl. Ophir II No. 6A, Kebayoran Baru, Jakarta Selatan</li>
+                        <li>Email: <a href="mailto:info@aksinyata.org"
+                                class="text-blue-600 hover:underline">info@aksinyata.org</a></li>
+                        <li>Telp: 0877-1199-9023</li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 class="font-semibold mb-4">Tautan Cepat</h3>
+                    <h3 class="font-bold mb-4 text-blue-900">Tautan Cepat</h3>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-blue-600">Program Kami</a></li>
-                        <li><a href="#" class="hover:text-blue-600">Berita & Acara</a></li>
-                        <li><a href="#" class="hover:text-blue-600">Kalkulator Zakat</a></li>
-                        <li><a href="#" class="hover:text-blue-600">Tentang Kami</a></li>
-                        <li><a href="#" class="hover:text-blue-600">FAQ</a></li>
+                        <li><a href="program.php" class="hover:text-blue-600">Program Kami</a></li>
+                        <li><a href="berita.php" class="hover:text-blue-600">Berita & Acara</a></li>
+                        <li><a href="kalkulator.php" class="hover:text-blue-600">Kalkulator Zakat</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Legalitas & Privasi</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 class="font-semibold mb-4">Sosial Media</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-blue-600">Facebook</a></li>
-                        <li><a href="#" class="hover:text-blue-600">Instagram</a></li>
-                        <li><a href="#" class="hover:text-blue-600">Twitter</a></li>
-                        <li><a href="#" class="hover:text-blue-600">Youtube</a></li>
-                    </ul>
+                    <h3 class="font-bold mb-4 text-blue-900">Sosial Media</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-blue-600">Instagram</a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600">Facebook</a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600">YouTube</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="mt-10">
-                <h3 class="font-semibold mb-3">Legalitas</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-blue-600">Kebijakan Privasi</a></li>
-                    <li><a href="#" class="hover:text-blue-600">Syarat & Ketentuan</a></li>
-                    <li><a href="#" class="hover:text-blue-600">Transparansi</a></li>
-                </ul>
-            </div>
-
-            <div class="border-t border-gray-300 mt-8 pt-6 text-center text-sm text-gray-500">
+            <hr class="my-8 border-blue-200">
+            <p class="text-center text-xs text-blue-700 font-medium">
                 © 2025 LAZNAS & Panti Yatim. All rights reserved.
-            </div>
+            </p>
         </div>
     </footer>
 

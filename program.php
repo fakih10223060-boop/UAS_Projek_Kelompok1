@@ -55,9 +55,7 @@ if (isset($conn)) {
      <h2 class="text-3xl font-bold mb-8 text-center text-blue-900">Detail Program Kami</h2>
 
      <section class="max-w-7xl mx-auto px-4 py-12">
-         <h1 class="text-3xl font-bold text-gray-800 mb-10 text-center">
-             Program Unggulan
-         </h1>
+
 
          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
              <?php while ($p = mysqli_fetch_assoc($data)) { ?>

@@ -1,25 +1,11 @@
 <?php
-// 1. Pengaturan Koneksi Database
-$host = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'panti_admin';  // Nama database sesuai gambar phpMyAdmin
-
-$conn = mysqli_connect($host, $user, $pass, $db);
-
-// Cek koneksi untuk mencegah Fatal Error
+$conn = mysqli_connect("localhost", "root", "", "panti_admin");
 if (!$conn) {
-    die('Koneksi gagal: ' . mysqli_connect_error());
+    die("Koneksi gagal: " . mysqli_connect_error());
 }
 
-// 2. Query mengambil data dari tabel galeri
-$query = 'SELECT * FROM galeri ORDER BY id DESC';
+$query = "SELECT * FROM berita_terbaru ORDER BY id DESC";
 $result = mysqli_query($conn, $query);
-
-// Validasi hasil query agar tidak TypeError di baris mysqli_fetch_assoc
-if (!$result) {
-    die('Kesalahan Query: ' . mysqli_error($conn));
-}
 ?>
 
 <!DOCTYPE html>
@@ -27,43 +13,30 @@ if (!$result) {
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAZNAS Berita - Program Pendidikan</title>
+    <title>Berita Terbaru | Aksi Nyata</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-    body {
-        font-family: 'Inter', sans-serif;
-    }
-    </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
-
-    <!-- Navbar -->
-    <nav class="bg-white shadow">
+    <nav class="bg-white shadow sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex items-center justify-between h-16">
-                <!-- Logo -->
-                <div class="flex items-center space-x-2">
-                    <img src="asset/logo/logo1.jpeg" alt="Aksi Nyata Foundation" class="h-8" />
-                    <span class="font-bold text-gray-800">AKSI NYATA</span>
+                <div class="flex items-center gap-2">
+                    <img src="asset/logo/logo1.jpeg" alt="#" class="h-8" />
+                    <span class="font-bold text-gray-800 uppercase">Aksi Nyata</span>
                 </div>
 
-                <!-- Menu -->
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
-                    <a href="index.php" class="text-gray-600 hover:text-blue-600 transition">Beranda</a>
+                    <a href="index.php" class="text-blue-600 font-bold">Beranda</a>
                     <a href="program.php" class="text-gray-600 hover:text-blue-600 transition">Program Unggulan</a>
-                    <a href="berita.php" class="text-blue-600 font-bold">Berita Terbaru</a>
+                    <a href="berita.php" class="text-gray-600 hover:text-blue-600 transition">Berita Terbaru</a>
                     <a href="kalkulator.php" class="text-gray-600 hover:text-blue-600 transition">Kalkulator Zakat</a>
                     <a href="tentang.php" class="text-gray-600 hover:text-blue-600 transition">Tentang Kami</a>
                 </div>
 
-                <!-- Button -->
-                <div>
+                <div class="flex items-center gap-4">
                     <a href="form_donasi.php"
-                        class="bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-5 py-2 rounded-md transition">
+                        class="bg-green-500 hover:bg-green-600 text-white text-xs md:text-sm font-semibold px-5 py-2.5 rounded-md transition">
                         DONASI SEKARANG
                     </a>
                 </div>
@@ -71,62 +44,42 @@ if (!$result) {
         </div>
     </nav>
 
-    <main class="container mx-auto px-4 md:px-0 max-w-4xl py-10">
-        <nav class="text-sm text-gray-500 mb-6">
-            <a href="#" class="hover:underline">Beranda</a> &gt;
-            <span class="text-teal-700 font-semibold">Berita Terbaru</span>
-        </nav>
+    <!-- CONTENT -->
+    <main class="max-w-3xl mx-auto px-4 py-12 space-y-14">
 
-        <article class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-4">
-                AKSINYATA Berhasil Salurkan Bantuan Pendidikan untuk Ribuan Yatim Dhuafa
-            </h1>
+        <?php if (mysqli_num_rows($result) > 0): ?>
+        <?php while ($row = mysqli_fetch_assoc($result)): ?>
 
-            <div class="flex items-center text-gray-500 text-sm mb-8">
-                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-xs font-bold mr-3">NEWS</span>
-                <span>15 Oktober 2026 | Oleh Tim Redaksi</span>
+        <article class="bg-white rounded-2xl shadow-sm p-6">
+            <h2 class="text-2xl md:text-3xl font-bold mb-2">
+                <?= htmlspecialchars($row['judul']) ?>
+            </h2>
+
+            <div class="text-xs text-gray-500 mb-4">
+                <?= date('d F Y', strtotime($row['tanggal'])) ?> |
+                Oleh <?= htmlspecialchars($row['penulis']) ?>
             </div>
 
-            <img src="asset/galeri/program5.jpeg" alt="Bantuan Pendidikan"
-                class="w-full h-auto rounded-xl mb-8 shadow-md">
-
-            <div class="prose max-w-none text-gray-700 leading-relaxed text-lg">
-                <p class="mb-4">
-                    Program bantuan pendidikan ini mencakup berbagai bentuk dukungan, mulai dari beasiswa penuh hingga
-                    pengadaan perlengkapan sekolah.
-                    Sasaran utama program adalah anak-anak yang berasal dari keluarga kurang mampu yang seringkali
-                    terancam putus sekolah.
-                </p>
-                <p class="mb-4 italic border-l-4 border-teal-500 pl-4 py-2 bg-teal-50">
-                    "Pendidikan adalah hak setiap anak. Kami percaya dengan memberikan kesempatan pendidikan yang layak,
-                    kita sedang berinvestasi pada masa depan bangsa."
-                </p>
+            <div class="overflow-hidden rounded-xl mb-4">
+                <img src="asset/galeri/<?= htmlspecialchars($row['gambar']) ?>"
+                    class="w-full h-64 object-cover hover:scale-105 transition">
             </div>
 
-            <section class="mt-12">
-                <h3 class="text-2xl font-bold text-teal-900 mb-6 flex items-center">
-                    <span class="w-8 h-1 bg-teal-500 mr-3"></span>
-                    Data Galeri Kegiatan
-                </h3>
+            <div class="border-l-4 border-teal-500 pl-4  text-gray-600 leading-relaxed">
+                <?= nl2br(htmlspecialchars($row['isi_berita'])) ?>
+            </div>
 
-                <div class="grid grid-cols-1 gap-4">
-                    <?php if (mysqli_num_rows($result) > 0): ?>
-                    <?php while ($row = mysqli_fetch_assoc($result)): ?>
-                    <div class="bg-gray-50 p-6 rounded-lg border-l-8 border-teal-600 hover:shadow-md transition">
-                        <h4 class="font-bold text-lg text-gray-800"><?php echo htmlspecialchars($row['judul']); ?></h4>
-                        <p class="text-gray-600 text-sm mt-2">
-                            <?php echo htmlspecialchars($row['deskripsi'] ?? 'Kegiatan penyaluran bantuan pendidikan.'); ?>
-                        </p>
-                    </div>
-                    <?php endwhile; ?>
-                    <?php else: ?>
-                    <div class="text-center py-10 border-2 border-dashed border-gray-200 rounded-xl">
-                        <p class="text-gray-400 italic">Belum ada data galeri kegiatan yang diunggah.</p>
-                    </div>
-                    <?php endif; ?>
-                </div>
-            </section>
         </article>
+
+        <?php endwhile; ?>
+        <?php else: ?>
+
+        <div class="bg-white p-10 text-center rounded-xl shadow">
+            <p class="text-gray-500">Belum ada berita yang dipublikasikan.</p>
+        </div>
+
+        <?php endif; ?>
+
     </main>
 
     <footer class="bg-blue-50 text-gray-700 border-t border-blue-100">
@@ -135,7 +88,9 @@ if (!$result) {
                 <div>
                     <h3 class="font-bold mb-4 text-blue-900">Tentang Kami</h3>
                     <p class="text-sm leading-relaxed">
-                        LAZNAS & Panti Yatim berkomitmen untuk menyalurkan amanah donasi Anda dengan transparan dan
+                        LAZNAS & Panti Yatim berkomitmen untuk menyalurkan amanah donasi Anda dengan
+                        transparan
+                        dan
                         efektif demi masa depan anak-anak yang lebih baik.
                     </p>
                 </div>
@@ -176,9 +131,7 @@ if (!$result) {
             </p>
         </div>
     </footer>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
+
 </body>
 
 </html>
