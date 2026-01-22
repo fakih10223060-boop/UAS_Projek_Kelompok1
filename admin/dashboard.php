@@ -81,7 +81,7 @@ $page = $_GET['page'] ?? 'home';
 
             <a href="dashboard.php?page=berita"
                 class="flex items-center gap-4 px-5 py-4 rounded-xl transition-all <?= active('berita', $page) ?>">
-                <span class="text-xl">📰</span> Berita
+                <span class="text-xl">📰</span> Bantuan tersalurkan
             </a>
 
             <a href="dashboard.php?page=galeri"
@@ -96,6 +96,10 @@ $page = $_GET['page'] ?? 'home';
             <a href="dashboard.php?page=program_unggulan"
                 class="flex items-center gap-4 px-5 py-4 rounded-xl transition-all <?= active('program_unggulan', $page) ?>">
                 <span class="text-xl">✉️</span> Program Unggulan
+            </a>
+            <a href="dashboard.php?page=berita_terbaru"
+                class="flex items-center gap-4 px-5 py-4 rounded-xl transition-all <?= active('berita_terbaru', $page) ?>">
+                <span class="text-xl">✉️</span>BeritaTerbaru
             </a>
             </ nav>
 
@@ -155,6 +159,9 @@ $page = $_GET['page'] ?? 'home';
                         case 'tambah_program': include "tambah_program.php"; break;
                         case 'hapus_program': include "hapus_program.php"; break;
                         case 'edit_program': include "edit_program.php"; break;
+                         case 'berita_terbaru': include "berita_terbaru.php"; break;
+                        case 'tambahberita_terbaru': include "tambahberita_terbaru.php"; break;
+                        case 'hapusberita_terbaru': include "hapusberita_terbaru.php"; break;
                         default: include "home.php"; break;
                     }
                     ?>
