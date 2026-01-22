@@ -104,6 +104,12 @@ $program = [
             <li><?php echo $kegiatan; ?></li>
         <?php endforeach; ?>
     </ul>
+<h3>📸 Dokumentasi Kegiatan</h3>
+    <div class="galeri">
+       <img src="asset/galeri/kegiatan1.jpeg" width="400">
+       <img src="asset/galeri/kegiatan2.jpeg" width="400">
+       <img src="asset/galeri/kegiatan3.jpeg" width="400">
+    </div>
 
     
 
