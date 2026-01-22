@@ -2,7 +2,7 @@
 include 'config/koneksi.php';
 
 if (!isset($_GET['id'])) {
-    echo "Program tidak ditemukan";
+    echo 'Program tidak ditemukan';
     exit;
 }
 
@@ -11,13 +11,13 @@ $query = mysqli_query($conn, "SELECT * FROM program WHERE id='$id'");
 $program = mysqli_fetch_assoc($query);
 
 if (!$program) {
-    echo "Program tidak ditemukan";
+    echo 'Program tidak ditemukan';
     exit;
 }
 
-$target     = $program['target_dana'];
-$terkumpul  = $program['dana_terkumpul'];
-$persen     = $target > 0 ? min(100, ($terkumpul / $target) * 100) : 0;
+$target = $program['target_dana'];
+$terkumpul = $program['dana_terkumpul'];
+$persen = $target > 0 ? min(100, ($terkumpul / $target) * 100) : 0;
 ?>
 
 <head>
@@ -123,6 +123,57 @@ $persen     = $target > 0 ? min(100, ($terkumpul / $target) * 100) : 0;
             100% donasi disalurkan kepada penerima manfaat
         </p>
     </aside>
+    <footer class="bg-blue-50 text-gray-700 border-t border-blue-100">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <h3 class="font-bold mb-4 text-blue-900">Tentang Kami</h3>
+                    <p class="text-sm leading-relaxed">
+                        LAZNAS & Panti Yatim berkomitmen untuk menyalurkan amanah donasi Anda dengan
+                        transparan
+                        dan
+                        efektif demi masa depan anak-anak yang lebih baik.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold mb-4 text-blue-900">Kontak</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>Jl. Ophir II No. 6A, Kebayoran Baru, Jakarta Selatan</li>
+                        <li>Email: <a href="mailto:info@aksinyata.org"
+                                class="text-blue-600 hover:underline">info@aksinyata.org</a></li>
+                        <a href="https://api.whatsapp.com/send?phone=+6283839421020&text=assalamu'alikum"
+                            class="text-gray-600 hover:text-blue-600">Telpon: 083839421020</a>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold mb-4 text-blue-900">Tautan Cepat</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="program.php" class="hover:text-blue-600">Program Kami</a></li>
+                        <li><a href="berita.php" class="hover:text-blue-600">Berita & Acara</a></li>
+                        <li><a href="kalkulator.php" class="hover:text-blue-600">Kalkulator Zakat</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Legalitas & Privasi</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold mb-4 text-blue-900">Sosial Media</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/aksinyata_foundation?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            class="text-gray-600 hover:text-blue-600">Instagram</a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600">Facebook</a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600">YouTube</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-8 border-blue-200">
+            <p class="text-center text-xs text-blue-700 font-medium">
+                © 2025 LAZNAS & Panti Yatim. All rights reserved.
+            </p>
+        </div>
+    </footer>
 
 </div>
 </div>
