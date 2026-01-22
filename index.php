@@ -1,8 +1,7 @@
 <?php
-include 'config/koneksi.php';
+// include 'config/koneksi.php';
 
-$query = mysqli_query($conn, 'SELECT * FROM berita ORDER BY id DESC');
-$data_berita = mysqli_fetch_all($query, MYSQLI_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
